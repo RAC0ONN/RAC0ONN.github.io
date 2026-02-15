@@ -23,6 +23,7 @@ export default defineConfig({
       Action: {
         Passed: async () => true,   // https://github.com/PlayForm/Compress/issues/376
       },
+      
     })
   ],
 });
