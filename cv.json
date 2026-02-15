@@ -4,11 +4,11 @@
   "basics": {
     "name": "Amelia",
     "label": "Estudiante de ingenieria de sistemas",
-    "image": "/avatar.png",
+    "image": "/avataryo.png",
     "email": "amel1albarracinn@gmail.com",
     "url": "https://www.gcxstudio.cn",
     "summary": "Soy estudiante de quinto semestre de ingienería de sistemas en la Universidad El Bosque, me gusta el desarrollo Front-end donde trabajo con Angular, HTML, CSS y typeScript",
-    "theme": "blue",
+    "theme": "Blue",
     "location": {
       "address": "Colombia",
       "city": "Bogotá",
