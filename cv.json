@@ -25,31 +25,31 @@
       }
     ],
     "beian": {
-      "mint": "赣ICP备2021005460号-1",
-      "police": "赣公网安备 36010302000349号"
+      "mint": "Hecho por Amelia",
+      "police": "15-02-2026"
     }
   },
   "images": {
-    "intro": "null ",
+    "intro": null,
     "list": [
       {
         "image": "/",
-        "alt": "Sunset in Nanchang",
+        "alt": "Modelado",
         "desc": "Shot on a sunny day in Nanchang. 2024.10.05"
       },
       {
         "image": "/",
-        "alt": "My Cat",
+        "alt": "Normalización",
         "desc": "A Ragdoll cat who stayed for a year. She's a girl."
       },
       {
         "image": "/",
-        "alt": "Emoji",
+        "alt": "SQL",
         "desc": "True, dude"
       },
       {
         "image": "/",
-        "alt": "Cat Kernel Crashed",
+        "alt": "Proyecto",
         "desc": "Cat Kernel Crashed"
       }
     ]
@@ -76,20 +76,20 @@
     {
       "name": null,
       "position": "Inicio carrera ingeniería de sistemas",
-      "location_type": "Remote",
+      "location_type": "universidad El Bosque",
       "location": "CO",
       "url": "https://www.unbosque.edu.co/programas-academicos/facultad-ingenieria/ingenieria-sistemas",
       "startDate": "15-01-2024",
       "endDate": null,
       "summary": "Inicio de mi carrera profesional",
       "highlights": [
-        "Enhanced internal workflow efficiency by 30%."
+        "Ingrese en el grupo de programacion competitiva de la unievrsidad"
       ],
       "responsibilities": [
         "Developed and maintained backend services using Node.js and Golang."
       ],
       "achievements": [
-        "Implemented a cloud drive and verification code system."
+        "Meción de honer en 4ta maratón interna de programación"
       ],
       "skills": {
         "PHP": "simple-icons:php",
@@ -167,38 +167,22 @@
   ],
   "projects": [
     {
-      "name": "ClaroHack 2025",
+      "name": "🚀ClaroHack 2025",
       "image": {
-        "url": "https://i0.hdslb.com/bfs/article/985e2caa8266dee4b9861ee6a341886d480025691.png@1e_1c.webp",
+        "url": "https://www.claro.com.co/institucional/escuelas-conectadas/",
         "position": "container",
         "dark": "https://i0.hdslb.com/bfs/article/4d0bf8a784d22e54e3e61763c361c9ef480025691.png@100q_1e_1c.webp"
       },
       "isActive": true,
-      "description": "En el 2025 la empresa de telecomonuciaciones Claro realizo un evento llamada ClaroHack donde se buscaba incentivar la implementación de soluciones de software innovadoras teniendo en cuenta ante todo el impacto ambiental que estas generaban en nuestro caso visibilizando el impacto que el programa 'Escuelas Conectadas' hecho por Claro habia dejado en el acceso de ni",
+      "description": "En el ClaroHack 2025, nuestro equipo implemento una solución de software innovadora que responde a la iniciativa por incentivasr las soluciones tecnológicas  con conciencia ambiental. Nos enfocamos en potenciar y dar visibilidad al programa Escuelas Conectadas de Claro, el cual ha transformado el acceso a internet para miles de niños y niñas en Colombia. Logrando así:",
       "highlights": [
-        "🎯 Privacy-friendly, no registration required, out-of-the-box",
-        "✨ Support saving passwords and retrieving email addresses",
-        "😄 Support multiple domain name suffixes",
-        "🚀 100% open source, fully based on Cloudflare."
+        "🎯 Mostrar cómo el programa de Claro ha transformado el acceso a internet para la niñez en todo el país",
+        "✨ Aportar directamente a la educación en Colombia, reduciendo brechas a través de la tecnología",
+        "😄 Demostramos que como estudiantes de la Universidad El Bosque somos capaces de desarrollar soluciones de software de alto impacto y nivel profesional",
+       
       ],
       "url": "https://what-the-fuck.sbs",
-      "github": "https://github.com/MiraHikari/cloudflare-vmail"
-    },
-    {
-      "name": "Riddle Town Hunt 2",
-      "image": {
-        "url": "https://rth2-webstatic.gbclstudio.cn/wp-content/uploads/2024/02/1707656250-76b2b0d2c94824e89a2b8b2c7d1c6afe.png",
-        "position": "background"
-      },
-      "isActive": false,
-      "description": "Public decryption activity in the form of Puzzle Hunt.",
-      "highlights": [
-        "👌 More than 1000 people participated, system runs normally",
-        "😮‍ Use headless CMS: WordPress to storage and manage contents, dynamically render page",
-        "😊 Windows-like interface",
-        "💕 Based on Astro"
-      ],
-      "url": "https://rth2.gcxstudio.cn/"
+      "github": "https://github.com/RAC0ONN"
     }
   ]
 }
