@@ -72,19 +72,33 @@
       "issuer": "En la Cuarta Maratón de Programación de la UNIVERSIDAD EL BOSQUE"
     }
   ],
-  "work": [
-    {
-      "name": null,
-      "position": "Inicio carrera ingeniería de sistemas",
-      "location_type": "Remote",
-      "location": "CO",
-      "url": "https://www.unbosque.edu.co/programas-academicos/facultad-ingenieria/ingenieria-sistemas",
-      "startDate": "15-01-2024",
-      "endDate": null,
-      "summary": "Inicio de mi carrera profesional"
-   
-    }
-  ],
+ "work": [
+  {
+    "name": "Universidad El Bosque",
+    "position": "Inicio carrera ingeniería de sistemas",
+    "location_type": "On-site",
+    "location": "Bogotá, Colombia",
+    "url": "https://www.unbosque.edu.co/programas-academicos/facultad-ingenieria/ingenieria-sistemas",
+    "startDate": "2024-01-15",
+    "endDate": null,
+    "summary": "Inicio de mi formación profesional en Ingeniería de Sistemas.",
+    "responsibilities": [
+      "Formación en programación y estructuras de datos",
+      "Desarrollo de proyectos académicos",
+      "Trabajo en equipo en proyectos de software"
+    ],
+    "achievements": [
+      "Participación en maratón de programación",
+      "Desarrollo de proyectos académicos destacados"
+    ],
+    "skills": [
+      "Java",
+      "SQL",
+      "Modelado de bases de datos"
+    ]
+  }
+],
+
   "skills": [
     {
       "name": "HTML",
