@@ -8,7 +8,7 @@
     "email": "amel1albarracinn@gmail.com",
     "url": "https://www.gcxstudio.cn",
     "summary": "Soy estudiante de quinto semestre de ingienería de sistemas en la Universidad El Bosque, me gusta el desarrollo Front-end donde trabajo con Angular, HTML, CSS y typeScript",
-    "theme": "Blue",
+    "theme": "blue",
     "location": {
       "address": "CO",
       "city": "Bogotá",
@@ -86,22 +86,16 @@
         "Ingrese en el grupo de programacion competitiva de la unievrsidad"
       ],
       "responsibilities": [
-        "Developed and maintained backend services using Node.js and Golang."
+        "Meción de honor en 4ta maratón interna de programación"
       ],
       "achievements": [
-        "Meción de honer en 4ta maratón interna de programación"
+        "   Participación en ClaroHack2025"
       ],
       "skills": {
-        "PHP": "simple-icons:php",
-        "Node": "ri:nodejs-line",
-        "Golang": "simple-icons:go",
-        "Next.js": "ri:nextjs-fill",
-        "React": "mdi:react",
-        "SQL": "simple-icons:mysql",
-        "Git": "mdi:git",
-        "GitHub": "mdi:github",
-        "NestJS": "simple-icons:nestjs",
-        "Vue": "mdi:vuejs"
+        "HTML": "mdi:language-html5",
+        "CSS": "mdi:language-css3",
+        "TypeScript": "mdi:language-typescript",
+        "Angular": "mdi:angular" 
       }
     }
   ],
@@ -137,7 +131,18 @@
       "JavaScript Superset",
       "Static Typing"
     ]
-  }
+  },
+  {
+    "name": "Angular",
+    "icon": "ri:angularjs-fill",
+    "level": "Expert",
+    "keywords": [
+      "Web Development",
+      "Frontend",
+      "Framework",
+      "SPA"
+    ]
+}
 ]
 ,
   "languages": [
@@ -171,7 +176,7 @@
       "image": {
         "url": "https://www.claro.com.co/institucional/escuelas-conectadas/",
         "position": "container",
-        "dark": "https://i0.hdslb.com/bfs/article/4d0bf8a784d22e54e3e61763c361c9ef480025691.png@100q_1e_1c.webp"
+        "dark": "https://i.scdn.co/image/ab6765630000ba8ae849558b34100f33bfd47d7d"
       },
       "isActive": true,
       "description": "En el ClaroHack 2025, nuestro equipo implemento una solución de software innovadora que responde a la iniciativa por incentivasr las soluciones tecnológicas  con conciencia ambiental. Nos enfocamos en potenciar y dar visibilidad al programa Escuelas Conectadas de Claro, el cual ha transformado el acceso a internet para miles de niños y niñas en Colombia. Logrando así:",
@@ -181,7 +186,7 @@
         "😄 Demostramos que como estudiantes de la Universidad El Bosque somos capaces de desarrollar soluciones de software de alto impacto y nivel profesional"
        
       ],
-      "url": "https://what-the-fuck.sbs",
+      "url": "https://www.claro.com.co/institucional/escuelas-conectadas/",
       "github": "https://github.com/RAC0ONN"
     }
   ]
