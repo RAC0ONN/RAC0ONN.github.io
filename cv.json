@@ -3,7 +3,7 @@
   "pageLayout": "two-column",
   "basics": {
     "name": "Amelia Camila Merchán Albarracín",
-    "label": "Estudiante de ingenieria de sistemas",
+    "label": "Estudiante de ingeniería de sistemas",
     "image": "/avataryo.png",
     "email": "amel1albarracinn@gmail.com",
     "url": "https://www.gcxstudio.cn",
@@ -64,7 +64,7 @@
     {
       "institution": "Universidad El Bosque",
       "url": "",
-      "area": "Regular Student",
+      "area": "Estudiante",
       "studyType": "Ingeniería de sistemas",
       "startDate": "15-01-2024",
       "endDate": null
@@ -92,7 +92,7 @@
         "Ingrese en el grupo de programacion competitiva de la unievrsidad"
       ],
       "responsibilities": [
-        "Meción de honor en 4ta maratón interna de programación"
+        "Mención de honor en 4ta maratón interna de programación"
       ],
       "achievements": [
         "   Participación en ClaroHack2025"
@@ -185,7 +185,7 @@
         "dark": "https://i.scdn.co/image/ab6765630000ba8ae849558b34100f33bfd47d7d"
       },
       "isActive": true,
-      "description": "Tuve la oportunidad de junto a mi equipo participar en la ClaroHack 2025, donde implementamos una solución de software innovadora que responde a la iniciativa por incentivasr las soluciones tecnológicas  con conciencia ambiental. Nos enfocamos en potenciar y dar visibilidad al programa Escuelas Conectadas de Claro, el cual ha transformado el acceso a internet para miles de niños y niñas en Colombia. Logrando así:",
+      "description": "Tuve la oportunidad de junto a mi equipo participar en la ClaroHack 2025, donde implementamos una solución de software innovadora que responde a la iniciativa por incentivar las soluciones tecnológicas  con conciencia ambiental. Nos enfocamos en potenciar y dar visibilidad al programa Escuelas Conectadas de Claro, el cual ha transformado el acceso a internet para miles de niños y niñas en Colombia. Logrando así:",
       "highlights": [
         "🎯 Mostrar cómo el programa de Claro ha transformado el acceso a internet para la niñez en todo el país",
         "✨ Aportar directamente a la educación en Colombia, reduciendo brechas a través de la tecnología",
