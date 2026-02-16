@@ -30,25 +30,25 @@
     }
   },
   "images": {
-    "intro": "modelad, normalizacion, SQL, proyecto ",
+    "intro": "null ",
     "list": [
       {
-        "image": "/avataryo.png",
+        "image": "/",
         "alt": "Sunset in Nanchang",
         "desc": "Shot on a sunny day in Nanchang. 2024.10.05"
       },
       {
-        "image": "/avataryo.png",
+        "image": "/",
         "alt": "My Cat",
         "desc": "A Ragdoll cat who stayed for a year. She's a girl."
       },
       {
-        "image": "/avataryo.png",
+        "image": "/",
         "alt": "Emoji",
         "desc": "True, dude"
       },
       {
-        "image": "/avataryo.png",
+        "image": "/",
         "alt": "Cat Kernel Crashed",
         "desc": "Cat Kernel Crashed"
       }
@@ -72,33 +72,75 @@
       "issuer": "En la Cuarta Maratón de Programación de la UNIVERSIDAD EL BOSQUE"
     }
   ],
- "work": [
-  {
-    "name": "Universidad El Bosque",
-    "position": "Inicio carrera ingeniería de sistemas",
-    "location_type": "On-site",
-    "location": "Bogotá, Colombia",
-    "url": "https://www.unbosque.edu.co/programas-academicos/facultad-ingenieria/ingenieria-sistemas",
-    "startDate": "2024-01-15",
-    "endDate": null,
-    "summary": "Inicio de mi formación profesional en Ingeniería de Sistemas.",
-    "responsibilities": [
-      "Formación en programación y estructuras de datos",
-      "Desarrollo de proyectos académicos",
-      "Trabajo en equipo en proyectos de software"
-    ],
-    "achievements": [
-      "Participación en maratón de programación",
-      "Desarrollo de proyectos académicos destacados"
-    ],
-    "skills": [
-      "Java",
-      "SQL",
-      "Modelado de bases de datos"
-    ]
-  }
-],
-
+  "work": [
+    {
+      "name": null,
+      "position": "Inicio carrera ingeniería de sistemas",
+      "location_type": "Remote",
+      "location": "CO",
+      "url": "https://www.unbosque.edu.co/programas-academicos/facultad-ingenieria/ingenieria-sistemas",
+      "startDate": "15-01-2024",
+      "endDate": null,
+      "summary": "Inicio de mi carrera profesional",
+      "highlights": [
+        "Enhanced internal workflow efficiency by 30%."
+      ],
+      "responsibilities": [
+        "Developed and maintained backend services using Node.js and Golang."
+      ],
+      "achievements": [
+        "Implemented a cloud drive and verification code system."
+      ],
+      "skills": {
+        "PHP": "simple-icons:php",
+        "Node": "ri:nodejs-line",
+        "Golang": "simple-icons:go",
+        "Next.js": "ri:nextjs-fill",
+        "React": "mdi:react",
+        "SQL": "simple-icons:mysql",
+        "Git": "mdi:git",
+        "GitHub": "mdi:github",
+        "NestJS": "simple-icons:nestjs",
+        "Vue": "mdi:vuejs"
+      }
+    },
+    {
+      "name": "Riddle Town Team",
+      "position": "Full-stack Developer",
+      "location_type": "Remote",
+      "location": "CN",
+      "url": "https://rth2.gcxstudio.cn",
+      "startDate": "2023-01-01",
+      "endDate": "2024-02-11",
+      "summary": "Led page design and account systems.",
+      "highlights": [
+        "Completed 95% of project content."
+      ],
+      "responsibilities": [
+        "Developed complete pages.",
+        "Integrated user-facing elements with server-side logic."
+      ],
+      "achievements": [
+        "Ensured smooth project execution."
+      ],
+      "skills": {
+        "HTML": "simple-icons:html5",
+        "CSS": "ri:css3-fill",
+        "JavaScript": "simple-icons:javascript",
+        "TypeScript": "simple-icons:typescript",
+        "Vite": "simple-icons:vite",
+        "Node": "ri:nodejs-line",
+        "Docker": "mdi:docker",
+        "WordPress": "ri:wordpress-fill",
+        "Astro": "simple-icons:astro",
+        "SQL": "simple-icons:mysql",
+        "Tailwind": "mdi:tailwind",
+        "React": "mdi:react",
+        "GitHub": "mdi:github",
+        "Git": "mdi:git"
+      }
+    }
+  ],
   "skills": [
     {
       "name": "HTML",
@@ -120,6 +162,28 @@
       ]
     },
     {
+      "name": "JavaScript",
+      "icon": "simple-icons:javascript",
+      "level": "Expert",
+      "keywords": [
+        "Web Development",
+        "Frontend",
+        "Backend",
+        "Fullstack"
+      ]
+    },
+    {
+      "name": "Tailwind",
+      "icon": "mdi:tailwind",
+      "level": "Intermediate",
+      "keywords": [
+        "Web Development",
+        "Frontend",
+        "CSS Framework",
+        "Responsive Design"
+      ]
+    },
+    {
       "name": "TypeScript",
       "icon": "simple-icons:typescript",
       "level": "Expert",
@@ -128,6 +192,264 @@
         "Frontend",
         "Backend",
         "JavaScript Superset"
+      ]
+    },
+    {
+      "name": "Node",
+      "icon": "ri:nodejs-line",
+      "level": "Intermediate",
+      "keywords": [
+        "Web Development",
+        "Backend",
+        "JavaScript",
+        "Server"
+      ]
+    },
+    {
+      "name": "SQL",
+      "icon": "simple-icons:mysql",
+      "level": "Intermediate",
+      "keywords": [
+        "Databases",
+        "SQL",
+        "Data Storage",
+        "Backend"
+      ]
+    },
+    {
+      "name": "MongoDB",
+      "icon": "simple-icons:mongodb",
+      "level": "Intermediate",
+      "keywords": [
+        "Databases",
+        "File",
+        "Data Storage",
+        "Backend"
+      ]
+    },
+    {
+      "name": "Git",
+      "icon": "mdi:git",
+      "level": "Intermediate",
+      "keywords": [
+        "Version Control",
+        "Collaboration",
+        "Source Code"
+      ]
+    },
+    {
+      "name": "GitHub",
+      "icon": "mdi:github",
+      "level": "Expert",
+      "keywords": [
+        "Version Control",
+        "Collaboration",
+        "Source Code",
+        "Git"
+      ]
+    },
+    {
+      "name": "Next.js",
+      "icon": "ri:nextjs-line",
+      "level": "Intermediate",
+      "keywords": [
+        "Web Development",
+        "Frontend",
+        "React Framework",
+        "SSR",
+        "Static Generation"
+      ]
+    },
+    {
+      "name": "React",
+      "icon": "mdi:react",
+      "level": "Expert",
+      "keywords": [
+        "Web Development",
+        "Frontend",
+        "JavaScript Library",
+        "UI"
+      ]
+    },
+    {
+      "name": "Vue",
+      "icon": "mdi:vuejs",
+      "level": "Intermediate",
+      "keywords": [
+        "Web Development",
+        "Frontend",
+        "JavaScript Library",
+        "UI"
+      ]
+    },
+    {
+      "name": "Docker",
+      "icon": "mdi:docker",
+      "level": "Intermediate",
+      "keywords": [
+        "Virtual Environments",
+        "Backend"
+      ]
+    },
+    {
+      "name": "NestJS",
+      "icon": "simple-icons:nestjs",
+      "level": "Intermediate",
+      "keywords": [
+        "Web Development",
+        "Backend",
+        "IOC"
+      ]
+    },
+    {
+      "name": "Vite",
+      "icon": "simple-icons:vite",
+      "level": "Intermediate",
+      "keywords": [
+        "Web Development",
+        "Frontend",
+        "Build Tool"
+      ]
+    },
+    {
+      "name": "WordPress",
+      "icon": "ri:wordpress-fill",
+      "level": "Intermediate",
+      "keywords": [
+        "PHP",
+        "Fullstack",
+        "Frontend"
+      ]
+    },
+    {
+      "name": "Golang",
+      "icon": "simple-icons:go",
+      "level": "Beginner",
+      "keywords": [
+        "Backend",
+        "Cloud Service"
+      ]
+    },
+    {
+      "name": "Astro",
+      "icon": "simple-icons:astro",
+      "level": "Intermediate",
+      "keywords": [
+        "Web Development",
+        "Frontend",
+        "SSR",
+        "Static Generation"
+      ]
+    },
+    {
+      "name": "PHP",
+      "icon": "simple-icons:php",
+      "level": "Intermediate",
+      "keywords": [
+        "Web Development",
+        "Backend",
+        "Fullstack"
+      ]
+    },
+    {
+      "name": "Nginx",
+      "icon": "simple-icons:nginx",
+      "level": "Intermediate",
+      "keywords": [
+        "Web Development",
+        "Backend",
+        "Web Server"
+      ]
+    },
+    {
+      "name": "Tauri",
+      "icon": "simple-icons:tauri",
+      "level": "Beginner",
+      "keywords": [
+        "Desktop App",
+        "Rust",
+        "Webview"
+      ]
+    },
+    {
+      "name": "Rust",
+      "icon": "simple-icons:rust",
+      "level": "Beginner",
+      "keywords": [
+        "Desktop App",
+        "Webview"
+      ]
+    },
+    {
+      "name": "Socket.IO",
+      "icon": "simple-icons:socketdotio",
+      "level": "Beginner",
+      "keywords": [
+        "Realtime",
+        "Websocket"
+      ]
+    },
+    {
+      "name": "Electron",
+      "icon": "simple-icons:electron",
+      "level": "Beginner",
+      "keywords": [
+        "Desktop App",
+        "Webview"
+      ]
+    },
+    {
+      "name": "Shell",
+      "icon": "simple-icons:shell",
+      "level": "Intermediate",
+      "keywords": [
+        "Scripting",
+        "Automation"
+      ]
+    },
+    {
+      "name": "Linux",
+      "icon": "simple-icons:linux",
+      "level": "Intermediate",
+      "keywords": [
+        "OS",
+        "Scripting",
+        "Automation"
+      ]
+    },
+    {
+      "name": "Vercel",
+      "icon": "simple-icons:vercel",
+      "level": "Intermediate",
+      "keywords": [
+        "Serverless",
+        "Static Site Hosting"
+      ]
+    },
+    {
+      "name": "Netlify",
+      "icon": "simple-icons:netlify",
+      "level": "Intermediate",
+      "keywords": [
+        "Serverless",
+        "Static Site Hosting"
+      ]
+    },
+    {
+      "name": "Tencent Cloud",
+      "icon": "simple-icons:tencentqq",
+      "level": "Intermediate",
+      "keywords": [
+        "Cloud Service"
+      ]
+    },
+    {
+      "name": "Cloudflare Edge Functions",
+      "icon": "simple-icons:cloudflare",
+      "level": "Expert",
+      "keywords": [
+        "Serverless",
+        "Edge Computing"
       ]
     }
   ],
