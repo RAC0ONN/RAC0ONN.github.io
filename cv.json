@@ -10,29 +10,18 @@
     "summary": "Soy estudiante de quinto semestre de ingienería de sistemas en la Universidad El Bosque, me gusta el desarrollo Front-end donde trabajo con Angular, HTML, CSS y typeScript",
     "theme": "Blue",
     "location": {
-      "address": "Colombia",
+      "address": "CO",
       "city": "Bogotá",
       "countryCode": "CO",
       "region": "Colombia"
     },
     "profiles": [
-      {
-        "network": "Bilibili",
-        "icon": "ri:bilibili-line",
-        "username": "MiraHikari",
-        "url": "https://space.bilibili.com/480025691"
-      },
-      {
-        "network": "QQ",
-        "icon": "ri:qq-fill",
-        "username": "Gong_cx",
-        "url": "https://admin.qidian.qq.com/static_proxy/b2b-qq/wpa-link/index.html#/person?uin=3175992523"
-      },
+    
       {
         "network": "GitHub",
         "icon": "mdi:github",
-        "username": "MiraHikari",
-        "url": "https://github.com/MiraHikari"
+        "username": "RAC0ONN",
+        "url": "https://github.com/RAC0ONN"
       }
     ],
     "beian": {
@@ -41,7 +30,7 @@
     }
   },
   "images": {
-    "intro": "Photography is the art of light, and images are the contours of memory.",
+    "intro": "Entra las cosas que me gustan ",
     "list": [
       {
         "image": "https://i0.hdslb.com/bfs/article/6720a7355fd11b9666e2716cadf04e45480025691.jpg@90q_1e_1c.webp",
@@ -67,26 +56,20 @@
   },
   "education": [
     {
-      "institution": "Nanchang No.27 Middle School",
+      "institution": "Universidad El Bosque",
       "url": "",
       "area": "Regular Student",
-      "studyType": "Full-time student",
-      "startDate": "2021-9-01",
+      "studyType": "Ingeniería de sistemas",
+      "startDate": "15-01-2024",
       "endDate": null
     }
   ],
   "certificates": [
     {
-      "name": "Success has lived a day in the world.",
-      "date": "2010-04-14",
+      "name": "CERTIFICADO DE PREMIACIÓN - Mención de honor al grupo Powerpuff girls",
+      "date": "2025",
       "url": "",
-      "issuer": "Myself"
-    },
-    {
-      "name": "TCCP - Senior Cloud Architecture Engineer",
-      "date": "2023-05-01",
-      "url": "",
-      "issuer": "Tencent Cloud"
+      "issuer": "En la Cuarta Maratón de Programación de la UNIVERSIDAD EL BOSQUE"
     }
   ],
   "work": [
@@ -472,12 +455,12 @@
   ],
   "languages": [
     {
-      "language": "Chinese",
-      "fluency": "Native speaker"
+      "language": "Spanish",
+      "fluency": "Idioma nativo"
     },
     {
-      "language": "English",
-      "fluency": "Intermediate"
+      "language": "Inglés",
+      "fluency": "Avanzado"
     }
   ],
   "interests": [
@@ -497,14 +480,14 @@
   ],
   "projects": [
     {
-      "name": "Cloudflare Vmail",
+      "name": "ClaroHack 2025",
       "image": {
         "url": "https://i0.hdslb.com/bfs/article/985e2caa8266dee4b9861ee6a341886d480025691.png@1e_1c.webp",
         "position": "container",
         "dark": "https://i0.hdslb.com/bfs/article/4d0bf8a784d22e54e3e61763c361c9ef480025691.png@100q_1e_1c.webp"
       },
       "isActive": true,
-      "description": "An open source temporary email tool, fully on Cloudflare. Inspired by oiov/vmail",
+      "description": "En el 2025 la empresa de telecomonuciaciones Claro realizo un evento llamada ClaroHack donde se buscaba incentivar la implementación de soluciones de software innovadoras teniendo en cuenta ante todo el impacto ambiental que estas generaban en nuestro caso visibilizando el impacto que el programa 'Escuelas Conectadas' hecho por Claro habia dejado en el acceso de ni",
       "highlights": [
         "🎯 Privacy-friendly, no registration required, out-of-the-box",
         "✨ Support saving passwords and retrieving email addresses",
