@@ -31,30 +31,35 @@
     }
   },
   "images": {
-    "intro": null,
-    "list": [
-      {
-        "image": "/",
-        "alt": "Modelado",
-        "desc": "Shot on a sunny day in Nanchang. 2024.10.05"
-      },
-      {
-        "image": "/",
-        "alt": "Normalización",
-        "desc": "A Ragdoll cat who stayed for a year. She's a girl."
-      },
-      {
-        "image": "/",
-        "alt": "SQL",
-        "desc": "True, dude"
-      },
-      {
-        "image": "/",
-        "alt": "Proyecto",
-        "desc": "Cat Kernel Crashed"
-      }
-    ]
-  },
+  "intro": null,
+  "list": [
+    {
+      "image": "/",
+      "alt": "Modelado",
+      "desc": "Shot on a sunny day in Nanchang. 2024.10.05",
+      "url": "https://tulink1.com"
+    },
+    {
+      "image": "/",
+      "alt": "Normalización",
+      "desc": "A Ragdoll cat who stayed for a year. She's a girl.",
+      "url": "https://tulink2.com"
+    },
+    {
+      "image": "/",
+      "alt": "SQL",
+      "desc": "True, dude",
+      "url": "https://tulink3.com"
+    },
+    {
+      "image": "/",
+      "alt": "Proyecto",
+      "desc": "Cat Kernel Crashed",
+      "url": "https://tulink4.com"
+    }
+  ]
+}
+,
   "education": [
     {
       "institution": "Universidad El Bosque",
