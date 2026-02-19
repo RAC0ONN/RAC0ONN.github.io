@@ -1,28 +1,25 @@
 ---
-import { Image } from "astro:assets";
 import Section from "../Section.astro";
-
 import CV from "@cv";
+
 const images = CV.images!;
 ---
 
 <Section className={Astro.props.className} title="Evidencias">
   {images?.intro && <p class="font-mono ml-3 text-skin-muted">{images.intro}</p>}
-  <div
-    class="grid grid-cols-1 gap-2 p-2 pt-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
-  >
+
+  <div class="grid grid-cols-1 gap-4 p-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
     {
-      images.list.map(({ image, alt, desc }) => (
-       <div class="relative overflow-hidden rounded-lg border border-skin-hue/20 bg-skin-button-accent/20" style="height: 0; padding-bottom: 100%;">
-          <a
-            href={item.url}
+      (images?.list ?? []).map((item) => (
+        <a
+          href={item.url}
           target="_blank"
           rel="noopener noreferrer"
-          class="group relative flex h-52 flex-col items-center justify-center rounded-lg border border-skin-hue/30 bg-skin-button-accent/10 p-6 text-center shadow-sm transition-all hover:border-skin-hue/50 hover:bg-skin-button-accent/20 hover:shadow-md focus:outline-none focus:ring-2 focus:ring-skin-accent"
+          class="group relative flex h-52 flex-col items-center justify-center rounded-lg border border-skin-hue/30 bg-skin-button-accent/10 px-6 py-8 text-center shadow-sm transition-all hover:border-skin-hue/50 hover:bg-skin-button-accent/20 hover:shadow-md focus:outline-none focus:ring-2 focus:ring-skin-accent"
         >
-            <span class="mb-3 text-xl font-bold text-skin-accent">{item.alt}</span>
+          <span class="mb-4 text-xl font-bold text-skin-accent">{item.alt}</span>
           <p class="text-sm text-skin-muted line-clamp-3">{item.desc}</p>
-          <span class="mt-4 text-xs opacity-70">Abrir en nueva pestaña →</span>
+          <span class="mt-6 text-xs opacity-70">Abrir en nueva pestaña →</span>
         </a>
       ))
     }
