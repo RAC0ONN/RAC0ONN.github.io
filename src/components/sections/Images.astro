@@ -15,26 +15,16 @@ const images = CV.images!;
       images.list.map(({ image, alt, desc }) => (
        <div class="relative overflow-hidden rounded-lg border border-skin-hue/20 bg-skin-button-accent/20" style="height: 0; padding-bottom: 100%;">
           <a
-            href={image}
-            data-fancybox="gallery"
-            data-caption={desc}
-            class="block aspect-square"
-          >
-            <Image
-              src={image}
-              alt={alt}
-              width={500}
-              height={500}
-              class="h-full w-full object-cover transition-transform duration-300 hover:scale-105"
-            />
-          </a>
-        </div>
+            href={item.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="group relative flex h-52 flex-col items-center justify-center rounded-lg border border-skin-hue/30 bg-skin-button-accent/10 p-6 text-center shadow-sm transition-all hover:border-skin-hue/50 hover:bg-skin-button-accent/20 hover:shadow-md focus:outline-none focus:ring-2 focus:ring-skin-accent"
+        >
+            <span class="mb-3 text-xl font-bold text-skin-accent">{item.alt}</span>
+          <p class="text-sm text-skin-muted line-clamp-3">{item.desc}</p>
+          <span class="mt-4 text-xs opacity-70">Abrir en nueva pestaña →</span>
+        </a>
       ))
     }
   </div>
 </Section>
-
-<script>
-  import { Fancybox } from "@fancyapps/ui";
-  Fancybox.bind('[data-fancybox="gallery"]', { hideScrollbar: false });
-</script>
