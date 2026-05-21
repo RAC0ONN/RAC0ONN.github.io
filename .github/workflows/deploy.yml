@@ -5,9 +5,6 @@ on:
     branches: [ master ]
   workflow_dispatch:
 
-env:
-  PNPM_ONLY_BUILT_DEPENDENCIES: esbuild,sharp,workerd
-
 permissions:
   contents: read
   pages: write
@@ -21,6 +18,8 @@ jobs:
         uses: actions/checkout@v5
       - name: Install, build, and upload your site
         uses: withastro/action@v5
+        with:
+          package-manager: npm
 
   deploy:
     needs: build
