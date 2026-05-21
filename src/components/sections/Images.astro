@@ -12,14 +12,12 @@ const images = CV.images!;
     {
       (images?.list ?? []).map((item) => (
         <a
-          href={item.url}
-          target="_blank"
-          rel="noopener noreferrer"
+          href="about:blank" 
           class="group relative flex h-52 flex-col items-center justify-center rounded-lg border border-skin-hue/30 bg-skin-button-accent/10 px-6 py-8 text-center shadow-sm transition-all hover:border-skin-hue/50 hover:bg-skin-button-accent/20 hover:shadow-md focus:outline-none focus:ring-2 focus:ring-skin-accent"
         >
           <span class="mb-4 text-xl font-bold text-skin-accent">{item.alt}</span>
           <p class="text-sm text-skin-muted line-clamp-3">{item.desc}</p>
-          <span class="mt-6 text-xs opacity-70">Abrir en nueva pestaña →</span>
+          <span class="mt-6 text-xs opacity-70">Abrir sección →</span>
         </a>
       ))
     }
