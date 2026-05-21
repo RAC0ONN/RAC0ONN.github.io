@@ -1,0 +1,41 @@
+---
+// src/pages/evidencias/[id].astro
+import Layout from "../../layouts/Layout.astro"; // Ajusta la ruta a tu layout principal
+import CV from "../../cv.json";
+
+// 1. Generamos las rutas permitidas basadas en tu archivo de datos (CV)
+export function getStaticPaths() {
+  const images = CV.images?.list ?? [];
+  return images.map((item) => {
+    // Usamos el título/alt para la URL (ej: "Modelado" -> "modelado")
+    const slug = item.alt.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, ""); 
+    return {
+      params: { id: slug },
+      props: { item }
+    };
+  });
+}
+ 
+// 2. Recuperamos los datos de la tarjeta actual
+const { id } = Astro.params;
+const { item } = Astro.props;
+---
+
+<Layout title={`Evidencias - ${item.alt}`}>
+  <main class="max-w-4xl mx-auto p-6 text-white">
+    <a href="/" class="text-sm text-skin-muted hover:text-skin-accent transition-colors">
+      ← Volver al inicio
+    </a>
+
+    <header class="mt-8 mb-6">
+      <h1 class="text-4xl font-bold text-skin-accent">{item.alt}</h1>
+      <p class="text-skin-muted mt-2">{item.desc}</p>
+    </header>
+
+    <hr class="border-skin-hue/20 my-6" />
+
+    <div class="min-h-[50vh] rounded-lg border border-dashed border-skin-hue/30 p-8 flex items-center justify-center text-skin-muted">
+      <p>Contenido de {item.alt} en construcción... ¡Aquí puedes añadir lo que quieras!</p>
+    </div>
+  </main>
+</Layout>

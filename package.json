@@ -1,7 +1,7 @@
 {
   "name": "portfolio-dev",
   "type": "module",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
@@ -33,14 +33,9 @@
     "rimraf": "^6.0.1",
     "wrangler": "^3.80.0"
   },
-  "pnpm": {
-    "onlyBuiltDependencies": [
-      "esbuild",
-      "sharp",
-      "workerd"
-    ]
-  }
-
-
-
+  "onlyBuiltDependencies": [
+    "esbuild",
+    "sharp",
+    "workerd"
+  ]
 }
