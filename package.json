@@ -32,5 +32,15 @@
     "prettier-plugin-astro": "^0.14.1",
     "rimraf": "^6.0.1",
     "wrangler": "^3.80.0"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild",
+      "sharp",
+      "workerd"
+    ]
   }
+
+
+
 }
