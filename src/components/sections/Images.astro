@@ -106,7 +106,8 @@ SELECT * FROM DEPARTAMENTOS WHERE Presupuesto BETWEEN 50000 AND 70000;
 SELECT E.ClaveEmpleado, E.Nombre, E.Apellido FROM EMPLEADOS E JOIN DEPARTAMENTOS D ON E.ClaveDepto = D.ClaveDepto WHERE D.Nombre = 'Contabilidad';
 SELECT E.Nombre, E.Apellido, D.Nombre AS NombreDepartamento FROM EMPLEADOS E JOIN DEPARTAMENTOS D ON E.ClaveDepto = D.ClaveDepto;`}</code></pre>
     </div>
-<div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-12">
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-12">
       <div class="bg-slate-950 rounded-xl border border-slate-800 p-2 shadow-md">
         <img src="/create.png" alt="Evidencia MySQL 1" class="w-full h-auto rounded-lg object-cover bg-slate-900" />
         <span class="text-xs text-slate-500 text-center block mt-2 font-mono">Evidencia 1</span>
@@ -124,7 +125,6 @@ SELECT E.Nombre, E.Apellido, D.Nombre AS NombreDepartamento FROM EMPLEADOS E JOI
         <span class="text-xs text-slate-500 text-center block mt-2 font-mono">Evidencia 4</span>
       </div>
     </div>
-
   </div>
 </div>
 
@@ -138,9 +138,7 @@ SELECT E.Nombre, E.Apellido, D.Nombre AS NombreDepartamento FROM EMPLEADOS E JOI
       Modelos Entidad Relación (MER)
     </h1>
 
-    <!-- APARTADO 1: CONCEPTOS GENERALES Y MER (Basado en Imágenes 1 y 2) -->
     <div class="space-y-8 text-base md:text-lg text-slate-300 leading-relaxed bg-slate-900/40 p-6 md:p-8 rounded-2xl border border-slate-800/60 backdrop-blur-sm mb-10">
-      
       <div>
         <p class="mb-4">
           El <strong class="text-blue-400">MER (Modelo Entidad Relación)</strong> permite planificar cómo quedará la base de datos para que sea funcional y optimizada. Cabe destacar que las bases de datos usan binarios para estructurar su información.
@@ -149,7 +147,6 @@ SELECT E.Nombre, E.Apellido, D.Nombre AS NombreDepartamento FROM EMPLEADOS E JOI
 
       <hr class="border-slate-800/80" />
 
-      <!-- Conceptos de Bases de Datos -->
       <div class="space-y-4">
         <h3 class="text-xl font-bold text-indigo-400 tracking-wide uppercase text-sm font-mono">// Conceptos de Bases de Datos</h3>
         <ul class="space-y-3 text-sm md:text-base pl-2 border-l-2 border-slate-700">
@@ -165,7 +162,6 @@ SELECT E.Nombre, E.Apellido, D.Nombre AS NombreDepartamento FROM EMPLEADOS E JOI
         </ul>
       </div>
 
-      <!-- Tipos de BBDD -->
       <div class="space-y-3">
         <h4 class="text-md font-semibold text-slate-200">Tipos de BBDD:</h4>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm font-mono">
@@ -182,7 +178,6 @@ SELECT E.Nombre, E.Apellido, D.Nombre AS NombreDepartamento FROM EMPLEADOS E JOI
 
       <hr class="border-slate-800/80" />
 
-      <!-- Secuencia para Modelado de Datos -->
       <div class="space-y-4">
         <h3 class="text-xs font-mono font-bold text-emerald-400 bg-emerald-500/10 px-3 py-1 inline-block rounded border border-emerald-500/20 tracking-wider uppercase">
           Secuencia para Modelado de Datos
@@ -206,27 +201,24 @@ SELECT E.Nombre, E.Apellido, D.Nombre AS NombreDepartamento FROM EMPLEADOS E JOI
 
       <hr class="border-slate-800/80" />
 
-      <!-- Componentes del MER -->
       <div class="space-y-6">
         <h3 class="text-xl font-black text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-amber-500 font-mono tracking-tight">
           [ Componentes del MER ]
         </h3>
 
-        <!-- Entidad -->
         <div class="bg-slate-950/40 p-4 rounded-xl border border-slate-800/50 space-y-2 text-sm md:text-base">
           <p>
             <strong class="text-amber-400 text-lg block font-mono">ENTIDAD:</strong> 
             Objeto concreto o abstracto del mundo real. 
           </p>
           <p class="text-slate-400 pl-4 border-l border-slate-700 text-xs md:text-sm">
-            👉 <strong class="text-pink-400 text-slate-300">Entidad Débil:</strong> Es aquella cuya existencia depende enteramente de otra entidad.
+             <strong class="text-slate-300">Entidad Débil:</strong> Es aquella cuya existencia depende enteramente de otra entidad.
           </p>
           <p class="text-slate-400 pl-4 border-l border-slate-700 text-xs md:text-sm">
-            👉 <strong class="text-slate-300">Ocurrencia:</strong> Instancia específica de la entidad.
+             <strong class="text-slate-300">Ocurrencia:</strong> Instancia específica de la entidad.
           </p>
         </div>
 
-        <!-- Atributos -->
         <div class="space-y-3">
           <p class="text-sm md:text-base font-semibold text-slate-200">
             <strong class="text-amber-400 font-mono">ATRIBUTOS:</strong> Características propias de la entidad. Existen varios tipos:
@@ -254,7 +246,6 @@ SELECT E.Nombre, E.Apellido, D.Nombre AS NombreDepartamento FROM EMPLEADOS E JOI
           </div>
         </div>
 
-        <!-- Relaciones y Claves -->
         <div class="space-y-4 text-sm md:text-base">
           <div class="bg-slate-950/40 p-4 rounded-xl border border-slate-800/50 space-y-3">
             <p>
@@ -262,7 +253,7 @@ SELECT E.Nombre, E.Apellido, D.Nombre AS NombreDepartamento FROM EMPLEADOS E JOI
               Número de entidades que participan activamente en la relación.
             </p>
             <p class="text-xs text-slate-400">
-              💡 <span class="text-slate-200 font-semibold">Atributos en relaciones:</span> Se pueden generar atributos propios dentro de las relaciones. Esto ocurre cuando la información que se va a almacenar no es propia de ninguna de las dos entidades por separado, sino que surge directamente de su interacción.
+               <span class="text-slate-200 font-semibold">Atributos en relaciones:</span> Se pueden generar atributos propios dentro de las relaciones. Esto ocurre cuando la información que se va a almacenar no es propia de ninguna de las dos entidades por separado, sino que surge directamente de su interacción.
             </p>
             <p class="text-xs text-pink-400 font-mono">
               <span class="font-bold">Roles:</span> Representan el papel exacto de la entidad dentro de la relación (Ej: Estudiante ➔ Inscribir ➔ Asignatura).
@@ -285,7 +276,6 @@ SELECT E.Nombre, E.Apellido, D.Nombre AS NombreDepartamento FROM EMPLEADOS E JOI
           </div>
         </div>
 
-        <!-- Abstracciones Avanzadas -->
         <div class="space-y-3">
           <h4 class="text-sm font-semibold text-slate-400 uppercase tracking-wider font-mono">// Abstracciones del Modelo</h4>
           <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs md:text-sm">
@@ -303,11 +293,9 @@ SELECT E.Nombre, E.Apellido, D.Nombre AS NombreDepartamento FROM EMPLEADOS E JOI
             </div>
           </div>
         </div>
-
       </div>
     </div>
 
-    <!-- APARTADO 2: CONVERSIÓN DE MER A MR (Basado en Imágenes 3 y 4) -->
     <div class="h-px bg-gradient-to-r from-transparent via-slate-700 to-transparent my-10"></div>
 
     <h2 class="text-3xl font-bold text-slate-100 mb-6 tracking-tight font-mono text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-400">
@@ -315,8 +303,6 @@ SELECT E.Nombre, E.Apellido, D.Nombre AS NombreDepartamento FROM EMPLEADOS E JOI
     </h2>
 
     <div class="space-y-6 text-sm md:text-base text-slate-300 bg-slate-900/40 p-6 md:p-8 rounded-2xl border border-slate-800/60 backdrop-blur-sm mb-10">
-      
-      <!-- Tratamiento de Atributos -->
       <div class="space-y-4">
         <h3 class="text-md font-bold text-pink-400 uppercase font-mono tracking-wider bg-pink-500/5 px-2 py-1 inline-block rounded border border-pink-500/10">
           Mapeo de Atributos
@@ -336,7 +322,6 @@ SELECT E.Nombre, E.Apellido, D.Nombre AS NombreDepartamento FROM EMPLEADOS E JOI
 
       <hr class="border-slate-800/60" />
 
-      <!-- Reglas de Cardinalidad -->
       <div class="space-y-4">
         <h3 class="text-md font-bold text-pink-400 uppercase font-mono tracking-wider bg-pink-500/5 px-2 py-1 inline-block rounded border border-pink-500/10">
           Reglas por Cardinalidad
@@ -359,7 +344,6 @@ SELECT E.Nombre, E.Apellido, D.Nombre AS NombreDepartamento FROM EMPLEADOS E JOI
 
       <hr class="border-slate-800/60" />
 
-      <!-- Relaciones Reflexivas y Entidades Débiles -->
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div class="space-y-3">
           <h4 class="text-xs font-bold text-pink-400 uppercase font-mono tracking-wider">// Relación Reflexiva</h4>
@@ -385,7 +369,6 @@ SELECT E.Nombre, E.Apellido, D.Nombre AS NombreDepartamento FROM EMPLEADOS E JOI
 
       <hr class="border-slate-800/60" />
 
-      <!-- Generalización / Especialización y Agregación -->
       <div class="space-y-4">
         <h3 class="text-md font-bold text-pink-400 uppercase font-mono tracking-wider bg-pink-500/5 px-2 py-1 inline-block rounded border border-pink-500/10">
           Mapeo de Abstracciones Complejas
@@ -413,10 +396,8 @@ SELECT E.Nombre, E.Apellido, D.Nombre AS NombreDepartamento FROM EMPLEADOS E JOI
           </div>
         </div>
       </div>
-
     </div>
 
-    <!-- TALLERES Y EVIDENCIAS (Manteniendo tu estructura original intacta) -->
     <div class="h-px bg-gradient-to-r from-transparent via-slate-700 to-transparent my-10"></div>
 
     <h2 class="text-3xl font-bold text-slate-100 mb-4 tracking-tight">
@@ -483,7 +464,6 @@ SELECT E.Nombre, E.Apellido, D.Nombre AS NombreDepartamento FROM EMPLEADOS E JOI
     </div>
   </div>
 </div>
-
 
 <div id="normalizacion-screen" class="hidden fixed inset-0 bg-[#030712] text-slate-200 z-50 overflow-y-auto p-6 md:p-12 selection:bg-blue-500/30">
   <div class="max-w-4xl mx-auto">
@@ -573,7 +553,7 @@ SELECT E.Nombre, E.Apellido, D.Nombre AS NombreDepartamento FROM EMPLEADOS E JOI
     <p class="text-sm font-mono text-slate-400 mb-6 bg-slate-950 p-3 rounded-lg border border-slate-800">
       La relación es: ALUMNO(id, alumno, documento, correoElectronico, celular, materia, codigoMateria, carrera, codigoCarrera)
       <br />
-      Para evitar redundancias se decide organizar de la siguiente manera:
+      Para evitar redundancias se decide organizar de la Administrative manera:
     </p>
 
     <div class="space-y-8 mb-12">
@@ -615,10 +595,8 @@ SELECT E.Nombre, E.Apellido, D.Nombre AS NombreDepartamento FROM EMPLEADOS E JOI
         </div>
       </div>
     </div>
-
- 
     <div class="h-px bg-gradient-to-r from-transparent via-slate-700 to-transparent my-10"></div>
-
+    
     <h2 class="text-3xl font-bold text-slate-100 mb-6 tracking-tight">
       Dependencias Funcionales
     </h2>
@@ -633,16 +611,15 @@ SELECT E.Nombre, E.Apellido, D.Nombre AS NombreDepartamento FROM EMPLEADOS E JOI
     </div>
 
     <div class="h-px bg-gradient-to-r from-transparent via-slate-700 to-transparent my-10"></div>
-
+    
     <h2 class="text-3xl font-bold text-slate-100 mb-6 tracking-tight">
-      Álgebra Relacional
+      Algebra Relacional
     </h2>
     <p class="text-sm text-slate-300 mb-6">
       Operaciones fundamentales y consultas avanzadas modeladas mediante expresiones formales de álgebra relacional.
     </p>
 
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
-   
       <div class="bg-slate-900/20 border border-slate-800 p-4 rounded-xl space-y-3">
         <h3 class="text-sm font-mono font-bold text-indigo-400">// Operación 1</h3>
         <div class="bg-slate-950 rounded-lg border border-slate-800 p-2 overflow-hidden shadow-sm">
@@ -657,7 +634,6 @@ SELECT E.Nombre, E.Apellido, D.Nombre AS NombreDepartamento FROM EMPLEADOS E JOI
         </div>
       </div>
 
-   
       <div class="bg-slate-900/20 border border-slate-800 p-4 rounded-xl space-y-3">
         <h3 class="text-sm font-mono font-bold text-indigo-400">// Operación 3</h3>
         <div class="bg-slate-950 rounded-lg border border-slate-800 p-2 overflow-hidden shadow-sm">
@@ -665,7 +641,6 @@ SELECT E.Nombre, E.Apellido, D.Nombre AS NombreDepartamento FROM EMPLEADOS E JOI
         </div>
       </div>
 
-     
       <div class="bg-slate-900/20 border border-slate-800 p-4 rounded-xl space-y-3">
         <h3 class="text-sm font-mono font-bold text-indigo-400">// Operación 4</h3>
         <div class="bg-slate-950 rounded-lg border border-slate-800 p-2 overflow-hidden shadow-sm">
@@ -673,7 +648,6 @@ SELECT E.Nombre, E.Apellido, D.Nombre AS NombreDepartamento FROM EMPLEADOS E JOI
         </div>
       </div>
 
-    
       <div class="bg-slate-900/20 border border-slate-800 p-4 rounded-xl space-y-3">
         <h3 class="text-sm font-mono font-bold text-indigo-400">// Operación 5</h3>
         <div class="bg-slate-950 rounded-lg border border-slate-800 p-2 overflow-hidden shadow-sm">
@@ -681,7 +655,6 @@ SELECT E.Nombre, E.Apellido, D.Nombre AS NombreDepartamento FROM EMPLEADOS E JOI
         </div>
       </div>
 
-     
       <div class="bg-slate-900/20 border border-slate-800 p-4 rounded-xl space-y-3">
         <h3 class="text-sm font-mono font-bold text-indigo-400">// Operación 6</h3>
         <div class="bg-slate-950 rounded-lg border border-slate-800 p-2 overflow-hidden shadow-sm">
@@ -689,202 +662,5 @@ SELECT E.Nombre, E.Apellido, D.Nombre AS NombreDepartamento FROM EMPLEADOS E JOI
         </div>
       </div>
     </div>
-
   </div>
 </div>
-
-<div id="proyectos-screen" class="hidden fixed inset-0 bg-[#030712] text-slate-200 z-50 overflow-y-auto p-6 md:p-12 selection:bg-blue-500/30">
-  <div class="max-w-4xl mx-auto">
-    <a href="?" class="inline-flex items-center text-sm text-blue-400 hover:text-blue-300 transition-colors mb-8 font-mono">
-      ← Volver al portafolio
-    </a>
-
-    <h1 class="text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-400 mb-6 tracking-tight">
-      Proyecto LUJUMA
-    </h1>
-
-    <div class="space-y-6 text-base md:text-lg text-slate-300 leading-relaxed bg-slate-900/40 p-6 rounded-2xl border border-slate-800/60 backdrop-blur-sm mb-8">
-      <p>
-        Lujuma es una plataforma dirigida a los usuarios que deseen llevar un seguimiento y registro de su ingesta de macronutrientes. El funcionamiento general del aplicativo se divide en ingreso de alimentos, recetas y comidas, una comida esta conformada por recetas y una receta por alimentos, es decir estas deben ser agregadas en este orden jerárquico. Lujuma le permite al usuario que a traves de la suma de sus alimentos → recetas → comidas calcule su ingesta de macronutrientes vs lo que segun variables como su peso y altura es su ingesta ideal de macronutrientes. A continuación se evidencia en el MERE el modelado de la funcionalidad principal de alimentos, recetas y comidas.
-      </p>
-    </div>
-
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
-      <div class="bg-slate-950 rounded-xl border border-slate-800 p-2 overflow-hidden shadow-md">
-        <img src="/alimento.png" alt="Modelado Principal 1" class="w-full h-auto rounded-lg object-cover bg-slate-900" />
-      </div>
-      <div class="bg-slate-950 rounded-xl border border-slate-800 p-2 overflow-hidden shadow-md">
-        <img src="/receta.png" alt="Modelado Principal 2" class="w-full h-auto rounded-lg object-cover bg-slate-900" />
-      </div>
-      <div class="bg-slate-950 rounded-xl border border-slate-800 p-2 overflow-hidden shadow-md">
-        <img src="/comida.png" alt="Modelado Principal 3" class="w-full h-auto rounded-lg object-cover bg-slate-900" />
-      </div>
-    </div>
-
-    <div class="space-y-4 text-base text-slate-300 mb-6">
-      <p>
-        Proseguiendo a las demas funcionalidades de Lujuma tenemos la opción de generar reportes de su ingesta actual de macronutrientes en el día la cual se ve modelada asi:
-      </p>
-      <div class="bg-slate-950 rounded-xl border border-slate-800 p-2 overflow-hidden shadow-md max-w-2xl mx-auto">
-        <img src="/reporte.png" alt="Modelado Reportes" class="w-full h-auto rounded-lg object-cover bg-slate-900" />
-      </div>
-    </div>
-
-    <div class="space-y-4 text-base text-slate-300 mb-6">
-      <p>
-        Junto con la funcionalidad del calendario donde el usuario puede consultar los reportes generados que se ve modelado asi:
-      </p>
-      <div class="bg-slate-950 rounded-xl border border-slate-800 p-2 overflow-hidden shadow-md max-w-2xl mx-auto">
-        <img src="/calendario.png" alt="Modelado Calendario" class="w-full h-auto rounded-lg object-cover bg-slate-900" />
-      </div>
-    </div>
-
-    <div class="bg-slate-950 border border-slate-800/80 rounded-xl p-4 mb-10 font-mono text-xs">
-      <span class="text-slate-400 block mb-1"> Enlace a MER - MERE:</span>
-      <a href="#" target="_blank" class="text-blue-400 hover:underline break-all">https://app.diagrams.net/#G1Qlny-e6BxFaYfwkLSmIVZ1tuk1Z-2Nv7#%7B%22pageId%22%3A%22r4vMKymsaTL6cAtya8p5%22%7D</a>
-    </div>
-
-    <div class="h-px bg-gradient-to-r from-transparent via-slate-700 to-transparent my-10"></div>
-
-    <h2 class="text-3xl font-bold text-slate-100 mb-6 tracking-tight">
-      Destacables de Lujuma
-    </h2>
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
-      <ul class="space-y-3 text-slate-300 text-sm md:text-base list-disc pl-5">
-        <li>Pregunta de privacidad para garantizar privacidad en el acceso</li>
-        <li>Manual de uso de la plataforma</li>
-        <li>Interfaz intuitiva y fácil de usar</li>
-        <li>Generación de registros y reportes</li>
-        <li>Libro de recetas predeterminada pensada para los usuarios de Lujuma</li>
-      </ul>
-    </div>
-
-    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10">
-      <div class="bg-slate-950 rounded-xl border border-slate-800 p-2 shadow-md">
-        <img src="/login.png" alt="Login" class="w-full h-auto rounded-lg object-cover bg-slate-900" />
-        <span class="text-xs text-slate-500 text-center block mt-2 font-mono">Login</span>
-      </div>
-      <div class="bg-slate-950 rounded-xl border border-slate-800 p-2 shadow-md">
-        <img src="/main.png" alt="Página Principal" class="w-full h-auto rounded-lg object-cover bg-slate-900" />
-        <span class="text-xs text-slate-500 text-center block mt-2 font-mono">Página principal</span>
-      </div>
-      <div class="bg-slate-950 rounded-xl border border-slate-800 p-2 shadow-md">
-        <img src="/food.png" alt="Apartado Alimentos" class="w-full h-auto rounded-lg object-cover bg-slate-900" />
-        <span class="text-xs text-slate-500 text-center block mt-2 font-mono">Apartado de alimentos</span>
-      </div>
-      <div class="bg-slate-950 rounded-xl border border-slate-800 p-2 shadow-md">
-        <img src="/recipe.png" alt="Apartado Recetas" class="w-full h-auto rounded-lg object-cover bg-slate-900" />
-        <span class="text-xs text-slate-500 text-center block mt-2 font-mono">Apartado de recetas</span>
-      </div>
-    </div>
-
-    <div class="h-px bg-gradient-to-r from-transparent via-slate-700 to-transparent my-10"></div>
-
-    <h2 class="text-3xl font-bold text-slate-100 mb-6 tracking-tight">
-      Implementación de Máquina virtual y RDBMS
-    </h2>
-    <div class="space-y-6 text-sm md:text-base text-slate-300 leading-relaxed">
-      <p>
-        Para la implementación se seleccionó Oracle VirtualBox. Oracle VirtualBox es un software de virtualización desarrollado por Oracle que permite crear y administrar máquinas virtuales compatibles con múltiples sistemas operativos.
-      </p>
-      
-      <div class="bg-slate-900/40 p-6 rounded-2xl border border-slate-800/60 backdrop-blur-sm">
-        <h3 class="text-xl font-bold text-blue-400 mb-3">Justificación del Uso de Oracle VirtualBox</h3>
-        <p class="mb-4 text-slate-400">
-          La selección de Oracle VirtualBox se realizó después de considerar diferentes alternativas de virtualización disponibles. Las principales razones de su elección fueron:
-        </p>
-        <ul class="grid grid-cols-1 md:grid-cols-2 gap-2 list-none pl-0 text-sm">
-          <li class="flex items-start"><span class="text-indigo-400 mr-2">▪</span> Software gratuito y de libre acceso para uso académico.</li>
-          <li class="flex items-start"><span class="text-indigo-400 mr-2">▪</span> Facilidad de instalación y configuración.</li>
-          <li class="flex items-start"><span class="text-indigo-400 mr-2">▪</span> Compatibilidad con Windows, Linux y macOS.</li>
-          <li class="flex items-start"><span class="text-indigo-400 mr-2">▪</span> Soporte para múltiples sistemas operativos invitados.</li>
-          <li class="flex items-start"><span class="text-indigo-400 mr-2">▪</span> Interfaz gráfica sencilla e intuitiva.</li>
-          <li class="flex items-start"><span class="text-indigo-400 mr-2">▪</span> Buen rendimiento para proyectos académicos.</li>
-          <li class="flex items-start"><span class="text-indigo-400 mr-2">▪</span> Soporte para snapshots o puntos de restauración.</li>
-          <li class="flex items-start"><span class="text-indigo-400 mr-2">▪</span> Administración simple de recursos virtuales.</li>
-          <li class="flex items-start"><span class="text-indigo-400 mr-2">▪</span> Amplia documentación y soporte comunitario.</li>
-          <li class="flex items-start"><span class="text-indigo-400 mr-2">▪</span> Compatibilidad adecuada con Red Hat Enterprise Linux.</li>
-        </ul>
-        <p class="mt-4 text-slate-400 text-xs">
-          Además, VirtualBox permitió configurar rápidamente un entorno funcional sin requerir herramientas empresariales de virtualización más complejas.
-        </p>
-      </div>
-
-      <p>
-        La implementación de MySQL sobre Red Hat Enterprise Linux ejecutado mediante Oracle VirtualBox permitió disponer de un entorno estable, seguro y funcional para soportar la base de datos del proyecto Lujuma. El proceso de instalación y configuración garantizó que el RDBMS quedara preparado para administrar la información del sistema de manera organizada y consistente. Además, la aplicación de restricciones, relaciones y pruebas funcionales permitió validar la correcta operación del entorno antes de su integración con los demás componentes del proyecto.
-      </p>
-
-      <p>
-        MySQL demostró ser una herramienta adecuada para las necesidades del sistema debido a su facilidad de administración, rendimiento y compatibilidad con el entorno Linux seleccionado. Su implementación no solo cumplió con los requisitos académicos establecidos, sino que también proporcionó experiencia práctica en el despliegue y administración de tecnologías reales utilizadas en el desarrollo de aplicaciones y bases de datos relacionales.
-      </p>
-
-      <div class="bg-slate-900/20 border border-slate-800 p-6 rounded-xl mt-6">
-        <h3 class="text-lg font-bold text-slate-200 mb-3">Matriz de Riesgos Identificados</h3>
-        <div class="bg-slate-950 rounded-xl border border-slate-800 p-2 overflow-hidden shadow-md max-w-xl mx-auto">
-          <img src="/matriz.png" alt="Matriz de Riesgos" class="w-full h-auto rounded-lg object-cover bg-slate-900" />
-        </div>
-      </div>
-    </div>
-
-    <div class="h-px bg-gradient-to-r from-transparent via-slate-700 to-transparent my-10"></div>
-
-    <h2 class="text-2xl font-bold text-slate-100 mb-4 tracking-tight">
-      Repositorios en GitHub
-    </h2>
-    <div class="bg-slate-950 border border-slate-800 rounded-xl p-4 mb-12 font-mono text-xs space-y-2">
-      <span class="text-slate-400 block mb-1">Para más información del proyecto Lujuma encontramos a continuación los enlaces a los repositorios:</span>
-      <a href="https://github.com/JuanF20-LJ/ApiLujumaDB" target="_blank" class="block text-blue-400 hover:underline break-all">https://github.com/JuanF20-LJ/ApiLujumaDB</a>
-      <a href="https://github.com/RAC0ONN/lujuma" target="_blank" class="block text-blue-400 hover:underline break-all">https://github.com/RAC0ONN/lujuma</a>
-    </div>
-  </div>
-</div>
-
-<Section className={Astro.props.className} title="Evidencias">
-  {images?.intro && <p class="font-mono ml-3 text-skin-muted">{images.intro}</p>}
-
-  <div class="grid grid-cols-1 gap-4 p-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-    {
-      (images?.list ?? []).map((item) => (
-        <a
-          href={`?seccion=${item.alt}`} 
-          class="group relative flex h-52 flex-col items-center justify-center rounded-lg border border-skin-hue/30 bg-skin-button-accent/10 px-6 py-8 text-center shadow-sm transition-all hover:border-skin-hue/50 hover:bg-skin-button-accent/20 hover:shadow-md focus:outline-none focus:ring-2 focus:ring-skin-accent"
-        >
-          <span class="mb-4 text-xl font-bold text-skin-accent">{item.alt}</span>
-          <p class="text-sm text-skin-muted line-clamp-3">{item.desc}</p>
-          <span class="mt-6 text-xs opacity-70">Abrir sección →</span>
-        </a>
-      ))
-    }
-  </div>
-</Section>
-
-<script>
-  const urlParams = new URLSearchParams(window.location.search);
-  const seccion = urlParams.get('seccion');
-  
-  if (seccion === 'SQL') {
-    const sqlScreen = document.getElementById('sql-screen');
-    if (sqlScreen) {
-      sqlScreen.classList.remove('hidden');
-      document.body.style.overflow = 'hidden';
-    }
-  } else if (seccion === 'Modelado') {
-    const modeladoScreen = document.getElementById('modelado-screen');
-    if (modeladoScreen) {
-      modeladoScreen.classList.remove('hidden');
-      document.body.style.overflow = 'hidden';
-    }
-  } else if (seccion === 'Normalizacion') {
-    const normalizacionScreen = document.getElementById('normalizacion-screen');
-    if (normalizacionScreen) {
-      normalizacionScreen.classList.remove('hidden');
-      document.body.style.overflow = 'hidden';
-    }
-  } else if (seccion === 'Proyectos') {
-    const proyectosScreen = document.getElementById('proyectos-screen');
-    if (proyectosScreen) {
-      proyectosScreen.classList.remove('hidden');
-      document.body.style.overflow = 'hidden';
-    }
-  }
-</script>
