@@ -106,6 +106,25 @@ SELECT * FROM DEPARTAMENTOS WHERE Presupuesto BETWEEN 50000 AND 70000;
 SELECT E.ClaveEmpleado, E.Nombre, E.Apellido FROM EMPLEADOS E JOIN DEPARTAMENTOS D ON E.ClaveDepto = D.ClaveDepto WHERE D.Nombre = 'Contabilidad';
 SELECT E.Nombre, E.Apellido, D.Nombre AS NombreDepartamento FROM EMPLEADOS E JOIN DEPARTAMENTOS D ON E.ClaveDepto = D.ClaveDepto;`}</code></pre>
     </div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-12">
+      <div class="bg-slate-950 rounded-xl border border-slate-800 p-2 shadow-md">
+        <img src="/create.png" alt="Evidencia MySQL 1" class="w-full h-auto rounded-lg object-cover bg-slate-900" />
+        <span class="text-xs text-slate-500 text-center block mt-2 font-mono">Evidencia 1</span>
+      </div>
+      <div class="bg-slate-950 rounded-xl border border-slate-800 p-2 shadow-md">
+        <img src="/alter.png" alt="Evidencia MySQL 2" class="w-full h-auto rounded-lg object-cover bg-slate-900" />
+        <span class="text-xs text-slate-500 text-center block mt-2 font-mono">Evidencia 2</span>
+      </div>
+      <div class="bg-slate-950 rounded-xl border border-slate-800 p-2 shadow-md">
+        <img src="/insert.png" alt="Evidencia MySQL 3" class="w-full h-auto rounded-lg object-cover bg-slate-900" />
+        <span class="text-xs text-slate-500 text-center block mt-2 font-mono">Evidencia 3</span>
+      </div>
+      <div class="bg-slate-950 rounded-xl border border-slate-800 p-2 shadow-md">
+        <img src="/consultas.png" alt="Evidencia MySQL 4" class="w-full h-auto rounded-lg object-cover bg-slate-900" />
+        <span class="text-xs text-slate-500 text-center block mt-2 font-mono">Evidencia 4</span>
+      </div>
+    </div>
+
   </div>
 </div>
 
@@ -116,35 +135,288 @@ SELECT E.Nombre, E.Apellido, D.Nombre AS NombreDepartamento FROM EMPLEADOS E JOI
     </a>
 
     <h1 class="text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-400 mb-6 tracking-tight">
-      Modelos Entidad Relación MER
+      Modelos Entidad Relación (MER)
     </h1>
 
-    <div class="space-y-6 text-base md:text-lg text-slate-300 leading-relaxed bg-slate-900/40 p-6 rounded-2xl border border-slate-800/60 backdrop-blur-sm mb-4">
-      <p>
-        El Modelo Entidad Relación (MER o ERD) es una herramienta para el modelado de datos que ayuda a representar entidades en una base de datos de forma visual e intuitiva. Fue desarrollado por Peter Chen en el 1976 y permite a los diseñadores actuales crear una representación abstracta de cómo los datos se organizan, relacionan e interactúan dentro del sistema de información.
-      </p>
+    <!-- APARTADO 1: CONCEPTOS GENERALES Y MER (Basado en Imágenes 1 y 2) -->
+    <div class="space-y-8 text-base md:text-lg text-slate-300 leading-relaxed bg-slate-900/40 p-6 md:p-8 rounded-2xl border border-slate-800/60 backdrop-blur-sm mb-10">
       
-      <p class="font-semibold text-blue-400">
-        El Modelo Entidad Relación está formado por tres elementos que trabajan en conjunto, son los siguientes:
-      </p>
+      <div>
+        <p class="mb-4">
+          El <strong class="text-blue-400">MER (Modelo Entidad Relación)</strong> permite planificar cómo quedará la base de datos para que sea funcional y optimizada. Cabe destacar que las bases de datos usan binarios para estructurar su información.
+        </p>
+      </div>
 
-      <ul class="space-y-4 list-none pl-0 text-sm md:text-base">
-        <li class="bg-slate-950/40 p-4 rounded-xl border border-slate-800/50">
-          <strong class="text-indigo-400 text-lg block mb-1">Entidades:</strong> representan objetos, personas, conceptos o lugares del mundo real sobre los que se quiere almacenar información. Por ejemplo, en una universidad, las entidades podrían ser los estudiantes, profesores, asignaturas, notas y aulas entre muchos otros.
-        </li>
-        <li class="bg-slate-950/40 p-4 rounded-xl border border-slate-800/50">
-          <strong class="text-indigo-400 text-lg block mb-1">Atributos:</strong> se trata de las características o propiedades que describen a las entidades. Por ejemplo, dentro de la universidad, cada estudiante tiene nombre, apellidos, carrera en la que se ha matriculado etc.
-        </li>
-        <li class="bg-slate-950/40 p-4 rounded-xl border border-slate-800/50">
-          <strong class="text-indigo-400 text-lg block mb-1">Relaciones:</strong> son las conexiones entre las distintas entidades, estableciendo como interactúan entre sí dentro del sistema.
-        </li>
-      </ul>
+      <hr class="border-slate-800/80" />
 
-      <span class="block text-xs text-slate-500 font-mono mt-4">
-        Extraido de <a href="https://universidadeuropea.com/blog/modelo-entidad-relacion/" target="_blank" class="text-blue-500 underline hover:text-blue-400">https://universidadeuropea.com/blog/modelo-entidad-relacion/</a>
-      </span>
+      <!-- Conceptos de Bases de Datos -->
+      <div class="space-y-4">
+        <h3 class="text-xl font-bold text-indigo-400 tracking-wide uppercase text-sm font-mono">// Conceptos de Bases de Datos</h3>
+        <ul class="space-y-3 text-sm md:text-base pl-2 border-l-2 border-slate-700">
+          <li>
+            <strong class="text-slate-100">Base de Datos:</strong> Colección de información perteneciente a un contexto igual, organizada mediante tablas para mantener la información ordenada. Estas forman <span class="text-blue-400 font-semibold">relaciones</span>.
+          </li>
+          <li>
+            <strong class="text-slate-100">Esquemas:</strong> Estructura donde se almacenan los datos.
+          </li>
+          <li>
+            <strong class="text-slate-100">Sistema Gestor de Bases de Datos (SGBD):</strong> Sistema computarizado para llevar registros, el cual facilita consultas, usos, etc., de una base de datos.
+          </li>
+        </ul>
+      </div>
+
+      <!-- Tipos de BBDD -->
+      <div class="space-y-3">
+        <h4 class="text-md font-semibold text-slate-200">Tipos de BBDD:</h4>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm font-mono">
+          <div class="bg-slate-950/50 p-3 rounded-lg border border-slate-800/60">
+            <span class="text-pink-400 block font-bold mb-1">Jerárquicas:</span>
+            Un padre puede tener varios hijos, un hijo solo un padre.
+          </div>
+          <div class="bg-slate-950/50 p-3 rounded-lg border border-slate-800/60">
+            <span class="text-pink-400 block font-bold mb-1">En red:</span>
+            Un padre varios hijos, un hijo varios padres.
+          </div>
+        </div>
+      </div>
+
+      <hr class="border-slate-800/80" />
+
+      <!-- Secuencia para Modelado de Datos -->
+      <div class="space-y-4">
+        <h3 class="text-xs font-mono font-bold text-emerald-400 bg-emerald-500/10 px-3 py-1 inline-block rounded border border-emerald-500/20 tracking-wider uppercase">
+          Secuencia para Modelado de Datos
+        </h3>
+        <p class="text-sm md:text-base">Hay 3 fases consecutivas:</p>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
+          <div class="bg-slate-950/40 p-4 rounded-xl border border-slate-800/40">
+            <span class="text-blue-400 font-bold block mb-1">1. Conceptual</span>
+            Visión general y abstracta, visión del negocio (MER).
+          </div>
+          <div class="bg-slate-950/40 p-4 rounded-xl border border-slate-800/40">
+            <span class="text-indigo-400 font-bold block mb-1">2. Lógico</span>
+            Versión donde se incluyen los detalles de los datos (MR - Modelo Relacional).
+          </div>
+          <div class="bg-slate-950/40 p-4 rounded-xl border border-slate-800/40">
+            <span class="text-purple-400 font-bold block mb-1">3. Físico</span>
+            Esquema que se implementará directamente como SGBD.
+          </div>
+        </div>
+      </div>
+
+      <hr class="border-slate-800/80" />
+
+      <!-- Componentes del MER -->
+      <div class="space-y-6">
+        <h3 class="text-xl font-black text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-amber-500 font-mono tracking-tight">
+          [ Componentes del MER ]
+        </h3>
+
+        <!-- Entidad -->
+        <div class="bg-slate-950/40 p-4 rounded-xl border border-slate-800/50 space-y-2 text-sm md:text-base">
+          <p>
+            <strong class="text-amber-400 text-lg block font-mono">ENTIDAD:</strong> 
+            Objeto concreto o abstracto del mundo real. 
+          </p>
+          <p class="text-slate-400 pl-4 border-l border-slate-700 text-xs md:text-sm">
+            👉 <strong class="text-pink-400 text-slate-300">Entidad Débil:</strong> Es aquella cuya existencia depende enteramente de otra entidad.
+          </p>
+          <p class="text-slate-400 pl-4 border-l border-slate-700 text-xs md:text-sm">
+            👉 <strong class="text-slate-300">Ocurrencia:</strong> Instancia específica de la entidad.
+          </p>
+        </div>
+
+        <!-- Atributos -->
+        <div class="space-y-3">
+          <p class="text-sm md:text-base font-semibold text-slate-200">
+            <strong class="text-amber-400 font-mono">ATRIBUTOS:</strong> Características propias de la entidad. Existen varios tipos:
+          </p>
+          
+          <div class="grid grid-cols-2 md:grid-cols-3 gap-3 text-xs md:text-sm font-mono">
+            <div class="p-3 bg-slate-950/60 rounded-lg border border-slate-800">
+              <span class="text-blue-400 font-bold block mb-1">Compuesto</span> Ej: <span class="text-slate-400">Nombre (Apellido1, Apellido2, NombrePropio)</span>
+            </div>
+            <div class="p-3 bg-slate-950/60 rounded-lg border border-slate-800">
+              <span class="text-blue-400 font-bold block mb-1">Simple</span> Ej: <span class="text-slate-400">id</span>
+            </div>
+            <div class="p-3 bg-slate-950/60 rounded-lg border border-slate-800">
+              <span class="text-blue-400 font-bold block mb-1">Monovalorado</span> Ej: <span class="text-slate-400">id</span>
+            </div>
+            <div class="p-3 bg-slate-950/60 rounded-lg border border-slate-800">
+              <span class="text-blue-400 font-bold block mb-1">Multivalorado</span> Tiene varios valores en una sola instancia. Ej: <span class="text-slate-400">Teléfono</span>
+            </div>
+            <div class="p-3 bg-slate-950/60 rounded-lg border border-slate-800">
+              <span class="text-blue-400 font-bold block mb-1">Derivado</span> Se calcula a partir de otro atributo. Ej: <span class="text-slate-400">Edad</span>
+            </div>
+            <div class="p-3 bg-slate-950/60 rounded-lg border border-slate-800 border-dashed border-amber-500/50">
+              <span class="text-amber-400 font-bold block mb-1">Clave</span> Identificador único del registro. Ej: <span class="text-slate-400">id</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Relaciones y Claves -->
+        <div class="space-y-4 text-sm md:text-base">
+          <div class="bg-slate-950/40 p-4 rounded-xl border border-slate-800/50 space-y-3">
+            <p>
+              <strong class="text-indigo-400 font-mono block">Grado de una relación:</strong> 
+              Número de entidades que participan activamente en la relación.
+            </p>
+            <p class="text-xs text-slate-400">
+              💡 <span class="text-slate-200 font-semibold">Atributos en relaciones:</span> Se pueden generar atributos propios dentro de las relaciones. Esto ocurre cuando la información que se va a almacenar no es propia de ninguna de las dos entidades por separado, sino que surge directamente de su interacción.
+            </p>
+            <p class="text-xs text-pink-400 font-mono">
+              <span class="font-bold">Roles:</span> Representan el papel exacto de la entidad dentro de la relación (Ej: Estudiante ➔ Inscribir ➔ Asignatura).
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4 font-mono text-xs bg-slate-950/30 p-4 rounded-xl border border-slate-800/40">
+            <div>
+              <span class="text-purple-400 font-bold block mb-1">Superclave:</span>
+              Cualquier combinación de atributos que garanticen unicidad.
+            </div>
+            <div>
+              <span class="text-purple-400 font-bold block mb-1">Clave Candidata:</span>
+              Candidatas para clave principal, bajo el principio del conjunto más reducido posible.
+            </div>
+            <div>
+              <span class="text-purple-400 font-bold block mb-1">Clave Principal:</span>
+              Identificador único y definitivo elegido para la tabla.
+            </div>
+          </div>
+        </div>
+
+        <!-- Abstracciones Avanzadas -->
+        <div class="space-y-3">
+          <h4 class="text-sm font-semibold text-slate-400 uppercase tracking-wider font-mono">// Abstracciones del Modelo</h4>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs md:text-sm">
+            <div class="bg-slate-950/60 p-3 rounded-lg border border-l-4 border-l-emerald-500 border-slate-800">
+              <strong class="text-emerald-400 block mb-1 font-mono">Generalización:</strong>
+              Va de abajo hacia arriba. Se revisan si se comparten atributos comunes y se crea una entidad superior.
+            </div>
+            <div class="bg-slate-950/60 p-3 rounded-lg border border-l-4 border-l-emerald-500 border-slate-800">
+              <strong class="text-emerald-400 block mb-1 font-mono">Especialización:</strong>
+              De arriba hacia abajo. Se van especificando y desglosando las características particulares de la entidad.
+            </div>
+            <div class="bg-slate-950/60 p-3 rounded-lg border border-l-4 border-l-emerald-500 border-slate-800">
+              <strong class="text-emerald-400 block mb-1 font-mono">Agregación:</strong>
+              Una relación que se conecta de forma directa con algo más, producto de una interacción previa.
+            </div>
+          </div>
+        </div>
+
+      </div>
     </div>
 
+    <!-- APARTADO 2: CONVERSIÓN DE MER A MR (Basado en Imágenes 3 y 4) -->
+    <div class="h-px bg-gradient-to-r from-transparent via-slate-700 to-transparent my-10"></div>
+
+    <h2 class="text-3xl font-bold text-slate-100 mb-6 tracking-tight font-mono text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-400">
+      Transformación / Conversión de MER a MR (Modelo Relacional)
+    </h2>
+
+    <div class="space-y-6 text-sm md:text-base text-slate-300 bg-slate-900/40 p-6 md:p-8 rounded-2xl border border-slate-800/60 backdrop-blur-sm mb-10">
+      
+      <!-- Tratamiento de Atributos -->
+      <div class="space-y-4">
+        <h3 class="text-md font-bold text-pink-400 uppercase font-mono tracking-wider bg-pink-500/5 px-2 py-1 inline-block rounded border border-pink-500/10">
+          Mapeo de Atributos
+        </h3>
+        <div class="space-y-2 border-l-2 border-slate-800 pl-4">
+          <p>
+            <strong class="text-slate-200">Compuestos:</strong> Cada una de las ramas del compuesto pasa directamente a ser un atributo independiente en la tabla.
+          </p>
+          <p>
+            <strong class="text-slate-200">Derivados:</strong> Se <span class="text-red-400 font-semibold">eliminan</span>; no se almacenan físicamente en el diseño relacional.
+          </p>
+          <p>
+            <strong class="text-slate-200">Multivalorados:</strong> Se crea una <span class="text-blue-400 font-semibold">nueva tabla</span> y la PK de la entidad original pasa a ser FK de la entidad generada. La PK de esta nueva tabla será la composición de la (<code class="text-xs bg-slate-950 px-1 py-0.5 rounded text-indigo-300">FK + el atributo multivalorado</code>). Este atributo se elimina de la entidad original.
+          </p>
+        </div>
+      </div>
+
+      <hr class="border-slate-800/60" />
+
+      <!-- Reglas de Cardinalidad -->
+      <div class="space-y-4">
+        <h3 class="text-md font-bold text-pink-400 uppercase font-mono tracking-wider bg-pink-500/5 px-2 py-1 inline-block rounded border border-pink-500/10">
+          Reglas por Cardinalidad
+        </h3>
+        <div class="space-y-3 font-mono text-xs md:text-sm">
+          <div class="bg-slate-950/50 p-3 rounded-lg border border-slate-800">
+            <span class="text-amber-400 font-bold block mb-1">Relación 1:1</span>
+            La PK de una de las entidades se moverá como FK a la otra (usualmente la FK se ubica en la entidad "dependiente"). Si la relación tiene atributos propios, estos se agregan a la tabla donde se migró la FK.
+          </div>
+          <div class="bg-slate-950/50 p-3 rounded-lg border border-slate-800">
+            <span class="text-amber-400 font-bold block mb-1">Relación 1:N</span>
+            Se debe poner la PK de la entidad del lado 1 como FK de la entidad que sea del lado N. Si la relación tiene atributos propios, estos se irán igualmente a la entidad del lado N.
+          </div>
+          <div class="bg-slate-950/50 p-3 rounded-lg border border-slate-800">
+            <span class="text-amber-400 font-bold block mb-1">Relación M:M</span>
+            Se crea obligatoriamente una <span class="text-blue-400 font-semibold">nueva tabla</span> con las PK de las entidades relacionadas, las cuales pasarán como FK de la nueva entidad y juntas formarán la PK compuesta de esta.
+          </div>
+        </div>
+      </div>
+
+      <hr class="border-slate-800/60" />
+
+      <!-- Relaciones Reflexivas y Entidades Débiles -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="space-y-3">
+          <h4 class="text-xs font-bold text-pink-400 uppercase font-mono tracking-wider">// Relación Reflexiva</h4>
+          <div class="bg-slate-950/40 p-3 rounded-lg border border-slate-800 text-xs md:text-sm space-y-2">
+            <p><span class="text-indigo-400 font-semibold font-mono">1:1 / 1:N ➔</span> Se añade un atributo a la misma entidad mapeado como FK.</p>
+            <p><span class="text-indigo-400 font-semibold font-mono">M:M ➔</span> Se crea una nueva tabla con la PK de la entidad y una copia de la PK de la relación reflexiva, ambos actuando como FK y formando en conjunto la PK de la nueva tabla.</p>
+          </div>
+        </div>
+
+        <div class="space-y-3">
+          <h4 class="text-xs font-bold text-pink-400 uppercase font-mono tracking-wider">// Entidades Débiles</h4>
+          <div class="bg-slate-950/40 p-3 rounded-lg border border-slate-800 text-xs md:text-sm space-y-2">
+            <p>Se agrega la PK de la entidad fuerte como foránea (FK):</p>
+            <p class="text-slate-400">
+              • <span class="text-slate-200">Por Identificación:</span> Si la débil no tiene suficiente fuerza de identificación por sí misma, el identificador será compuesto por (<code class="text-xs bg-slate-950 text-indigo-300 px-1">PK + FK</code>).
+            </p>
+            <p class="text-slate-400">
+              • <span class="text-slate-200">Por Existencia:</span> Si tiene sentido por sí sola, el atributo foráneo será únicamente una <code class="text-xs bg-slate-950 text-amber-400 px-1">FK</code> estándar.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <hr class="border-slate-800/60" />
+
+      <!-- Generalización / Especialización y Agregación -->
+      <div class="space-y-4">
+        <h3 class="text-md font-bold text-pink-400 uppercase font-mono tracking-wider bg-pink-500/5 px-2 py-1 inline-block rounded border border-pink-500/10">
+          Mapeo de Abstracciones Complejas
+        </h3>
+        
+        <div class="bg-slate-950/50 p-4 rounded-xl border border-slate-800 space-y-4 text-xs md:text-sm">
+          <div>
+            <span class="text-slate-200 font-bold block font-mono mb-2">Generalización / Especialización:</span>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-2 mb-3 text-center text-xs font-mono">
+              <div class="p-1.5 bg-slate-900 rounded border border-slate-800"><span class="text-indigo-400 font-bold">Total:</span> Sí o sí pertenece a uno de los hijos.</div>
+              <div class="p-1.5 bg-slate-900 rounded border border-slate-800"><span class="text-indigo-400 font-bold">Parcial:</span> Puede no pertenecer a los hijos.</div>
+              <div class="p-1.5 bg-slate-900 rounded border border-slate-800"><span class="text-indigo-400 font-bold">Disyunta:</span> No puede pertenecer a más de un hijo.</div>
+              <div class="p-1.5 bg-slate-900 rounded border border-slate-800"><span class="text-indigo-400 font-bold">Superpuesta:</span> Puede pertenecer a varios hijos de forma simultánea.</div>
+            </div>
+            <p class="text-slate-300 font-mono text-xs bg-slate-900/60 p-2 rounded border border-slate-800/50">
+              <span class="text-emerald-400">Regla de reducción:</span> Se crea una tabla por cada hijo, y la PK de la entidad padre pasa como PK y FK de los hijos.
+            </p>
+          </div>
+
+          <div class="pt-2 border-t border-slate-800/60">
+            <span class="text-slate-200 font-bold block font-mono mb-1">Agregación:</span>
+            <p class="text-slate-300 font-mono text-xs bg-slate-900/60 p-2 rounded border border-slate-800/50">
+              <span class="text-emerald-400">Regla de reducción:</span> Se genera una nueva tabla con ambas PK de las entidades que engloba como FK, y ambas forman de manera conjunta la PK de la tabla resultante.
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- TALLERES Y EVIDENCIAS (Manteniendo tu estructura original intacta) -->
     <div class="h-px bg-gradient-to-r from-transparent via-slate-700 to-transparent my-10"></div>
 
     <h2 class="text-3xl font-bold text-slate-100 mb-4 tracking-tight">
@@ -175,7 +447,8 @@ SELECT E.Nombre, E.Apellido, D.Nombre AS NombreDepartamento FROM EMPLEADOS E JOI
     </div>
 
     <div class="bg-slate-950 border border-slate-800/80 rounded-xl p-4 mb-10 font-mono text-xs">
-      
+      <span class="text-slate-400 block mb-1"> URL Evidencia:</span>
+      <a href="#" target="_blank" class="text-blue-400 hover:underline break-all">https://app.diagrams.net/#G1reXSmuN_sj4Pdtjd8gKqTOY1V3DFdp92#%7B%22pageId%22%3A%22_dzi_sW6QicOyO9qBCWc%22%7D</a>
     </div>
 
     <div class="h-px bg-gradient-to-r from-transparent via-slate-700 to-transparent my-10"></div>
@@ -205,7 +478,363 @@ SELECT E.Nombre, E.Apellido, D.Nombre AS NombreDepartamento FROM EMPLEADOS E JOI
     </div>
 
     <div class="bg-slate-950 border border-slate-800/80 rounded-xl p-4 mb-12 font-mono text-xs">
+      <span class="text-slate-400 block mb-1"> URL Evidencia:</span>
+      <a href="#" target="_blank" class="text-blue-400 hover:underline break-all">https://app.diagrams.net/#G1reXSmuN_sj4Pdtjd8gKqTOY1V3DFdp92#%7B%22pageId%22%3A%22_dzi_sW6QicOyO9qBCWc%22%7D</a>
+    </div>
+  </div>
+</div>
+
+
+<div id="normalizacion-screen" class="hidden fixed inset-0 bg-[#030712] text-slate-200 z-50 overflow-y-auto p-6 md:p-12 selection:bg-blue-500/30">
+  <div class="max-w-4xl mx-auto">
+    <a href="?" class="inline-flex items-center text-sm text-blue-400 hover:text-blue-300 transition-colors mb-8 font-mono">
+      ← Volver al portafolio
+    </a>
+
+    <h1 class="text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-400 mb-6 tracking-tight">
+      Normalización
+    </h1>
+
+    <div class="space-y-6 text-base md:text-lg text-slate-300 leading-relaxed bg-slate-900/40 p-6 rounded-2xl border border-slate-800/60 backdrop-blur-sm mb-4">
+      <p>
+        Proceso de diseño de bases de datos que organiza los datos en tablas con el fin de mejorar la integridad de estos mismos, minimizar redundancias y optimizar rendimientos en las consultas. Para este proceso se aplican las llamadas “Formas Normales”, son las siguientes:
+      </p>
+
+      <ul class="space-y-3 list-none pl-0 text-sm md:text-base">
+        <li class="bg-slate-950/40 p-3 rounded-xl border border-slate-800/50">
+          <strong class="text-indigo-400 mr-2">Primera forma normal:</strong> Garantizar la atomicidad de los datos y la no existencia de grupos repetidos
+        </li>
+        <li class="bg-slate-950/40 p-3 rounded-xl border border-slate-800/50">
+          <strong class="text-indigo-400 mr-2">Segunda forma normal:</strong> Cumplimiento de primera forma normal y eliminar dependencias parciales
+        </li>
+        <li class="bg-slate-950/40 p-3 rounded-xl border border-slate-800/50">
+          <strong class="text-indigo-400 mr-2">Tercera forma normal:</strong> Cumplimiento de segunda forma normal y eliminar dependencias transitivas
+        </li>
+      </ul>
+    </div>
+
+    <div class="h-px bg-gradient-to-r from-transparent via-slate-700 to-transparent my-10"></div>
+
+    <h2 class="text-3xl font-bold text-slate-100 mb-4 tracking-tight">
+      Ejercicio 1
+    </h2>
+    <p class="text-sm font-mono text-slate-400 mb-6 bg-slate-950 p-3 rounded-lg border border-slate-800">
+      La relación es: Ordenes(id_orden, fecha, id_cliente, nom_cliente, estado, num_art, nom_art, cant, precio)
+      <br />
+      Se define que num_art, nom_art, cant, precio tienen grupos repetidos
+    </p>
+
+    <div class="space-y-8">
+      <div class="bg-slate-900/20 border border-slate-800 p-6 rounded-xl space-y-4">
+        <h3 class="text-xl font-bold text-blue-400">Aplicar 1FN</h3>
+        <p class="text-sm text-slate-300">Ya que se definen ciertos atributos como repetidos estos se mueven a otra tabla, quedaria asi:</p>
+        <code class="block text-xs font-mono text-indigo-300 bg-slate-950 p-3 rounded-lg border border-slate-800/60">
+          ORDEN(id_orden, fecha, id_cliente, nom_cliente, estado)<br />
+          ORDEN_ARTICULO(id_orden, num_art, nom_art, cant, precio)
+        </code>
+        <div class="bg-slate-950 rounded-xl border border-slate-800 p-2 overflow-hidden shadow-md max-w-xl mx-auto mt-4">
+          <img src="/nor1.png" alt="Ejercicio 1 - 1FN" class="w-full h-auto rounded-lg object-cover bg-slate-900" />
+        </div>
+      </div>
+
+      <div class="bg-slate-900/20 border border-slate-800 p-6 rounded-xl space-y-4">
+        <h3 class="text-xl font-bold text-blue-400">Aplicar 2FN</h3>
+        <p class="text-sm text-slate-300">En la tabla Articulos(id_orden, num_art, nom_art, cant, precio) vemos que Precio y nom_art dependen solo de num_art, no de id_orden por lo tanto hay que quitar esta dependencia parcial, quedando:</p>
+        <code class="block text-xs font-mono text-indigo-300 bg-slate-950 p-3 rounded-lg border border-slate-800/60">
+          ORDEN(id_orden, fecha, id_cliente, nom_cliente, estado)<br />
+          ORDEN_ARTICULO(id_orden, num_art, cant)<br />
+          ARTICULO(nom_art, num_art, precio)
+        </code>
+        <div class="bg-slate-950 rounded-xl border border-slate-800 p-2 overflow-hidden shadow-md max-w-xl mx-auto mt-4">
+          <img src="/nor2.png" alt="Ejercicio 1 - 2FN" class="w-full h-auto rounded-lg object-cover bg-slate-900" />
+        </div>
+      </div>
+
+      <div class="bg-slate-900/20 border border-slate-800 p-6 rounded-xl space-y-4">
+        <h3 class="text-xl font-bold text-blue-400">Aplicar 3FN</h3>
+        <p class="text-sm text-slate-300">En la tabla ORDEN nom_cliente y estado dependen de id_cliente pero id_cliente no es la clave primaria entonces es una dependencia transitiva que debe ser eliminada</p>
+        <code class="block text-xs font-mono text-indigo-300 bg-slate-950 p-3 rounded-lg border border-slate-800/60">
+          ORDEN(id_orden, fecha, id_cliente)<br />
+          CLIENTE(id_cliente, nom_cliente, estado)<br />
+          ORDEN_ARTICULO(id_orden, num_art, cant)<br />
+          ARTICULO(nom_art, num_art, precio)
+        </code>
+        <div class="bg-slate-950 rounded-xl border border-slate-800 p-2 overflow-hidden shadow-md max-w-xl mx-auto mt-4">
+          <img src="/nor3.png" alt="Ejercicio 1 - 3FN" class="w-full h-auto rounded-lg object-cover bg-slate-900" />
+        </div>
+      </div>
+    </div>
+
+    <div class="h-px bg-gradient-to-r from-transparent via-slate-700 to-transparent my-10"></div>
+
+    <h2 class="text-3xl font-bold text-slate-100 mb-4 tracking-tight">
+      Ejercicio 2
+    </h2>
+    <p class="text-sm font-mono text-slate-400 mb-6 bg-slate-950 p-3 rounded-lg border border-slate-800">
+      La relación es: ALUMNO(id, alumno, documento, correoElectronico, celular, materia, codigoMateria, carrera, codigoCarrera)
+      <br />
+      Para evitar redundancias se decide organizar de la siguiente manera:
+    </p>
+
+    <div class="space-y-8 mb-12">
+      <div class="bg-slate-900/20 border border-slate-800 p-6 rounded-xl space-y-4">
+        <h3 class="text-xl font-bold text-blue-400">Aplicar 1FN</h3>
+        <code class="block text-xs font-mono text-indigo-300 bg-slate-950 p-3 rounded-lg border border-slate-800/60">
+          ALUMNO(id, alumno, documento, correoElectronico, celular, carrera, codigoCarrera)<br />
+          MATERIA(id, materia, codigoMateria)
+        </code>
+        <div class="bg-slate-950 rounded-xl border border-slate-800 p-2 overflow-hidden shadow-md max-w-xl mx-auto mt-4">
+          <img src="/nor21.png" alt="Ejercicio 2 - 1FN" class="w-full h-auto rounded-lg object-cover bg-slate-900" />
+        </div>
+      </div>
+
+      <div class="bg-slate-900/20 border border-slate-800 p-6 rounded-xl space-y-4">
+        <h3 class="text-xl font-bold text-blue-400">Aplicar 2FN</h3>
+        <p class="text-sm text-slate-300">En la tabla MATERIA materia es solo dependiente de codigoMateria, no del id</p>
+        <code class="block text-xs font-mono text-indigo-300 bg-slate-950 p-3 rounded-lg border border-slate-800/60">
+          ALUMNO(id, alumno, documento, correoElectronico, celular, carrera, codigoCarrera)<br />
+          MATERIA(materia, codigoMateria)<br />
+          ALU_MATE(id, codigoMateria)
+        </code>
+        <div class="bg-slate-950 rounded-xl border border-slate-800 p-2 overflow-hidden shadow-md max-w-xl mx-auto mt-4">
+          <img src="/nor22.png" alt="Ejercicio 2 - 2FN" class="w-full h-auto rounded-lg object-cover bg-slate-900" />
+        </div>
+      </div>
+
+      <div class="bg-slate-900/20 border border-slate-800 p-6 rounded-xl space-y-4">
+        <h3 class="text-xl font-bold text-blue-400">Aplicar 3FN</h3>
+        <p class="text-sm text-slate-300">En la tabla ALUMNO carrera es dependiente de codigoCarrera y esta al no ser primaria genera una dependencia transitiva</p>
+        <code class="block text-xs font-mono text-indigo-300 bg-slate-950 p-3 rounded-lg border border-slate-800/60">
+          ALUMNO(id, alumno, documento, correoElectronico, celular)<br />
+          MATERIA(materia, codigoMateria)<br />
+          ALU_MATE(id, codigoMateria)<br />
+          CARRERA(codigoCarrera, carrera)
+        </code>
+        <div class="bg-slate-950 rounded-xl border border-slate-800 p-2 overflow-hidden shadow-md max-w-xl mx-auto mt-4">
+          <img src="/nor23.png" alt="Ejercicio 2 - 3FN" class="w-full h-auto rounded-lg object-cover bg-slate-900" />
+        </div>
+      </div>
+    </div>
+
+ 
+    <div class="h-px bg-gradient-to-r from-transparent via-slate-700 to-transparent my-10"></div>
+
+    <h2 class="text-3xl font-bold text-slate-100 mb-6 tracking-tight">
+      Dependencias Funcionales
+    </h2>
+    <div class="bg-slate-900/20 border border-slate-800 p-6 rounded-xl space-y-4 mb-12">
+      <p class="text-sm text-slate-300">
+        Análisis y mapeo estructural de las dependencias funcionales identificadas en los conjuntos de atributos.
+      </p>
+      <div class="bg-slate-950 rounded-xl border border-slate-800 p-2 overflow-hidden shadow-md max-w-2xl mx-auto mt-4">
+        <img src="/dependencias1.png" alt="Análisis de Dependencias Funcionales" class="w-full h-auto rounded-lg object-cover bg-slate-900" />
+        <span class="text-xs text-slate-500 text-center block mt-2 font-mono">Mapa de Dependencias</span>
+      </div>
+    </div>
+
+    <div class="h-px bg-gradient-to-r from-transparent via-slate-700 to-transparent my-10"></div>
+
+    <h2 class="text-3xl font-bold text-slate-100 mb-6 tracking-tight">
+      Álgebra Relacional
+    </h2>
+    <p class="text-sm text-slate-300 mb-6">
+      Operaciones fundamentales y consultas avanzadas modeladas mediante expresiones formales de álgebra relacional.
+    </p>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+   
+      <div class="bg-slate-900/20 border border-slate-800 p-4 rounded-xl space-y-3">
+        <h3 class="text-sm font-mono font-bold text-indigo-400">// Operación 1</h3>
+        <div class="bg-slate-950 rounded-lg border border-slate-800 p-2 overflow-hidden shadow-sm">
+          <img src="/algebra1.png" alt="Álgebra Relacional - Ejercicio 1" class="w-full h-auto rounded-md object-cover bg-slate-900" />
+        </div>
+      </div>
+
+      <div class="bg-slate-900/20 border border-slate-800 p-4 rounded-xl space-y-3">
+        <h3 class="text-sm font-mono font-bold text-indigo-400">// Operación 2</h3>
+        <div class="bg-slate-950 rounded-lg border border-slate-800 p-2 overflow-hidden shadow-sm">
+          <img src="/algebra2.png" alt="Álgebra Relacional - Ejercicio 2" class="w-full h-auto rounded-md object-cover bg-slate-900" />
+        </div>
+      </div>
+
+   
+      <div class="bg-slate-900/20 border border-slate-800 p-4 rounded-xl space-y-3">
+        <h3 class="text-sm font-mono font-bold text-indigo-400">// Operación 3</h3>
+        <div class="bg-slate-950 rounded-lg border border-slate-800 p-2 overflow-hidden shadow-sm">
+          <img src="/algebra3.png" alt="Álgebra Relacional - Ejercicio 3" class="w-full h-auto rounded-md object-cover bg-slate-900" />
+        </div>
+      </div>
+
      
+      <div class="bg-slate-900/20 border border-slate-800 p-4 rounded-xl space-y-3">
+        <h3 class="text-sm font-mono font-bold text-indigo-400">// Operación 4</h3>
+        <div class="bg-slate-950 rounded-lg border border-slate-800 p-2 overflow-hidden shadow-sm">
+          <img src="/algebra4.png" alt="Álgebra Relacional - Ejercicio 4" class="w-full h-auto rounded-md object-cover bg-slate-900" />
+        </div>
+      </div>
+
+    
+      <div class="bg-slate-900/20 border border-slate-800 p-4 rounded-xl space-y-3">
+        <h3 class="text-sm font-mono font-bold text-indigo-400">// Operación 5</h3>
+        <div class="bg-slate-950 rounded-lg border border-slate-800 p-2 overflow-hidden shadow-sm">
+          <img src="/algebra5.png" alt="Álgebra Relacional - Ejercicio 5" class="w-full h-auto rounded-md object-cover bg-slate-900" />
+        </div>
+      </div>
+
+     
+      <div class="bg-slate-900/20 border border-slate-800 p-4 rounded-xl space-y-3">
+        <h3 class="text-sm font-mono font-bold text-indigo-400">// Operación 6</h3>
+        <div class="bg-slate-950 rounded-lg border border-slate-800 p-2 overflow-hidden shadow-sm">
+          <img src="/algebra6.png" alt="Álgebra Relacional - Ejercicio 6" class="w-full h-auto rounded-md object-cover bg-slate-900" />
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div id="proyectos-screen" class="hidden fixed inset-0 bg-[#030712] text-slate-200 z-50 overflow-y-auto p-6 md:p-12 selection:bg-blue-500/30">
+  <div class="max-w-4xl mx-auto">
+    <a href="?" class="inline-flex items-center text-sm text-blue-400 hover:text-blue-300 transition-colors mb-8 font-mono">
+      ← Volver al portafolio
+    </a>
+
+    <h1 class="text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-400 mb-6 tracking-tight">
+      Proyecto LUJUMA
+    </h1>
+
+    <div class="space-y-6 text-base md:text-lg text-slate-300 leading-relaxed bg-slate-900/40 p-6 rounded-2xl border border-slate-800/60 backdrop-blur-sm mb-8">
+      <p>
+        Lujuma es una plataforma dirigida a los usuarios que deseen llevar un seguimiento y registro de su ingesta de macronutrientes. El funcionamiento general del aplicativo se divide en ingreso de alimentos, recetas y comidas, una comida esta conformada por recetas y una receta por alimentos, es decir estas deben ser agregadas en este orden jerárquico. Lujuma le permite al usuario que a traves de la suma de sus alimentos → recetas → comidas calcule su ingesta de macronutrientes vs lo que segun variables como su peso y altura es su ingesta ideal de macronutrientes. A continuación se evidencia en el MERE el modelado de la funcionalidad principal de alimentos, recetas y comidas.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+      <div class="bg-slate-950 rounded-xl border border-slate-800 p-2 overflow-hidden shadow-md">
+        <img src="/alimento.png" alt="Modelado Principal 1" class="w-full h-auto rounded-lg object-cover bg-slate-900" />
+      </div>
+      <div class="bg-slate-950 rounded-xl border border-slate-800 p-2 overflow-hidden shadow-md">
+        <img src="/receta.png" alt="Modelado Principal 2" class="w-full h-auto rounded-lg object-cover bg-slate-900" />
+      </div>
+      <div class="bg-slate-950 rounded-xl border border-slate-800 p-2 overflow-hidden shadow-md">
+        <img src="/comida.png" alt="Modelado Principal 3" class="w-full h-auto rounded-lg object-cover bg-slate-900" />
+      </div>
+    </div>
+
+    <div class="space-y-4 text-base text-slate-300 mb-6">
+      <p>
+        Proseguiendo a las demas funcionalidades de Lujuma tenemos la opción de generar reportes de su ingesta actual de macronutrientes en el día la cual se ve modelada asi:
+      </p>
+      <div class="bg-slate-950 rounded-xl border border-slate-800 p-2 overflow-hidden shadow-md max-w-2xl mx-auto">
+        <img src="/reporte.png" alt="Modelado Reportes" class="w-full h-auto rounded-lg object-cover bg-slate-900" />
+      </div>
+    </div>
+
+    <div class="space-y-4 text-base text-slate-300 mb-6">
+      <p>
+        Junto con la funcionalidad del calendario donde el usuario puede consultar los reportes generados que se ve modelado asi:
+      </p>
+      <div class="bg-slate-950 rounded-xl border border-slate-800 p-2 overflow-hidden shadow-md max-w-2xl mx-auto">
+        <img src="/calendario.png" alt="Modelado Calendario" class="w-full h-auto rounded-lg object-cover bg-slate-900" />
+      </div>
+    </div>
+
+    <div class="bg-slate-950 border border-slate-800/80 rounded-xl p-4 mb-10 font-mono text-xs">
+      <span class="text-slate-400 block mb-1"> Enlace a MER - MERE:</span>
+      <a href="#" target="_blank" class="text-blue-400 hover:underline break-all">https://app.diagrams.net/#G1Qlny-e6BxFaYfwkLSmIVZ1tuk1Z-2Nv7#%7B%22pageId%22%3A%22r4vMKymsaTL6cAtya8p5%22%7D</a>
+    </div>
+
+    <div class="h-px bg-gradient-to-r from-transparent via-slate-700 to-transparent my-10"></div>
+
+    <h2 class="text-3xl font-bold text-slate-100 mb-6 tracking-tight">
+      Destacables de Lujuma
+    </h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+      <ul class="space-y-3 text-slate-300 text-sm md:text-base list-disc pl-5">
+        <li>Pregunta de privacidad para garantizar privacidad en el acceso</li>
+        <li>Manual de uso de la plataforma</li>
+        <li>Interfaz intuitiva y fácil de usar</li>
+        <li>Generación de registros y reportes</li>
+        <li>Libro de recetas predeterminada pensada para los usuarios de Lujuma</li>
+      </ul>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10">
+      <div class="bg-slate-950 rounded-xl border border-slate-800 p-2 shadow-md">
+        <img src="/login.png" alt="Login" class="w-full h-auto rounded-lg object-cover bg-slate-900" />
+        <span class="text-xs text-slate-500 text-center block mt-2 font-mono">Login</span>
+      </div>
+      <div class="bg-slate-950 rounded-xl border border-slate-800 p-2 shadow-md">
+        <img src="/main.png" alt="Página Principal" class="w-full h-auto rounded-lg object-cover bg-slate-900" />
+        <span class="text-xs text-slate-500 text-center block mt-2 font-mono">Página principal</span>
+      </div>
+      <div class="bg-slate-950 rounded-xl border border-slate-800 p-2 shadow-md">
+        <img src="/food.png" alt="Apartado Alimentos" class="w-full h-auto rounded-lg object-cover bg-slate-900" />
+        <span class="text-xs text-slate-500 text-center block mt-2 font-mono">Apartado de alimentos</span>
+      </div>
+      <div class="bg-slate-950 rounded-xl border border-slate-800 p-2 shadow-md">
+        <img src="/recipe.png" alt="Apartado Recetas" class="w-full h-auto rounded-lg object-cover bg-slate-900" />
+        <span class="text-xs text-slate-500 text-center block mt-2 font-mono">Apartado de recetas</span>
+      </div>
+    </div>
+
+    <div class="h-px bg-gradient-to-r from-transparent via-slate-700 to-transparent my-10"></div>
+
+    <h2 class="text-3xl font-bold text-slate-100 mb-6 tracking-tight">
+      Implementación de Máquina virtual y RDBMS
+    </h2>
+    <div class="space-y-6 text-sm md:text-base text-slate-300 leading-relaxed">
+      <p>
+        Para la implementación se seleccionó Oracle VirtualBox. Oracle VirtualBox es un software de virtualización desarrollado por Oracle que permite crear y administrar máquinas virtuales compatibles con múltiples sistemas operativos.
+      </p>
+      
+      <div class="bg-slate-900/40 p-6 rounded-2xl border border-slate-800/60 backdrop-blur-sm">
+        <h3 class="text-xl font-bold text-blue-400 mb-3">Justificación del Uso de Oracle VirtualBox</h3>
+        <p class="mb-4 text-slate-400">
+          La selección de Oracle VirtualBox se realizó después de considerar diferentes alternativas de virtualización disponibles. Las principales razones de su elección fueron:
+        </p>
+        <ul class="grid grid-cols-1 md:grid-cols-2 gap-2 list-none pl-0 text-sm">
+          <li class="flex items-start"><span class="text-indigo-400 mr-2">▪</span> Software gratuito y de libre acceso para uso académico.</li>
+          <li class="flex items-start"><span class="text-indigo-400 mr-2">▪</span> Facilidad de instalación y configuración.</li>
+          <li class="flex items-start"><span class="text-indigo-400 mr-2">▪</span> Compatibilidad con Windows, Linux y macOS.</li>
+          <li class="flex items-start"><span class="text-indigo-400 mr-2">▪</span> Soporte para múltiples sistemas operativos invitados.</li>
+          <li class="flex items-start"><span class="text-indigo-400 mr-2">▪</span> Interfaz gráfica sencilla e intuitiva.</li>
+          <li class="flex items-start"><span class="text-indigo-400 mr-2">▪</span> Buen rendimiento para proyectos académicos.</li>
+          <li class="flex items-start"><span class="text-indigo-400 mr-2">▪</span> Soporte para snapshots o puntos de restauración.</li>
+          <li class="flex items-start"><span class="text-indigo-400 mr-2">▪</span> Administración simple de recursos virtuales.</li>
+          <li class="flex items-start"><span class="text-indigo-400 mr-2">▪</span> Amplia documentación y soporte comunitario.</li>
+          <li class="flex items-start"><span class="text-indigo-400 mr-2">▪</span> Compatibilidad adecuada con Red Hat Enterprise Linux.</li>
+        </ul>
+        <p class="mt-4 text-slate-400 text-xs">
+          Además, VirtualBox permitió configurar rápidamente un entorno funcional sin requerir herramientas empresariales de virtualización más complejas.
+        </p>
+      </div>
+
+      <p>
+        La implementación de MySQL sobre Red Hat Enterprise Linux ejecutado mediante Oracle VirtualBox permitió disponer de un entorno estable, seguro y funcional para soportar la base de datos del proyecto Lujuma. El proceso de instalación y configuración garantizó que el RDBMS quedara preparado para administrar la información del sistema de manera organizada y consistente. Además, la aplicación de restricciones, relaciones y pruebas funcionales permitió validar la correcta operación del entorno antes de su integración con los demás componentes del proyecto.
+      </p>
+
+      <p>
+        MySQL demostró ser una herramienta adecuada para las necesidades del sistema debido a su facilidad de administración, rendimiento y compatibilidad con el entorno Linux seleccionado. Su implementación no solo cumplió con los requisitos académicos establecidos, sino que también proporcionó experiencia práctica en el despliegue y administración de tecnologías reales utilizadas en el desarrollo de aplicaciones y bases de datos relacionales.
+      </p>
+
+      <div class="bg-slate-900/20 border border-slate-800 p-6 rounded-xl mt-6">
+        <h3 class="text-lg font-bold text-slate-200 mb-3">Matriz de Riesgos Identificados</h3>
+        <div class="bg-slate-950 rounded-xl border border-slate-800 p-2 overflow-hidden shadow-md max-w-xl mx-auto">
+          <img src="/matriz.png" alt="Matriz de Riesgos" class="w-full h-auto rounded-lg object-cover bg-slate-900" />
+        </div>
+      </div>
+    </div>
+
+    <div class="h-px bg-gradient-to-r from-transparent via-slate-700 to-transparent my-10"></div>
+
+    <h2 class="text-2xl font-bold text-slate-100 mb-4 tracking-tight">
+      Repositorios en GitHub
+    </h2>
+    <div class="bg-slate-950 border border-slate-800 rounded-xl p-4 mb-12 font-mono text-xs space-y-2">
+      <span class="text-slate-400 block mb-1">Para más información del proyecto Lujuma encontramos a continuación los enlaces a los repositorios:</span>
+      <a href="https://github.com/JuanF20-LJ/ApiLujumaDB" target="_blank" class="block text-blue-400 hover:underline break-all">https://github.com/JuanF20-LJ/ApiLujumaDB</a>
+      <a href="https://github.com/RAC0ONN/lujuma" target="_blank" class="block text-blue-400 hover:underline break-all">https://github.com/RAC0ONN/lujuma</a>
     </div>
   </div>
 </div>
@@ -243,6 +872,18 @@ SELECT E.Nombre, E.Apellido, D.Nombre AS NombreDepartamento FROM EMPLEADOS E JOI
     const modeladoScreen = document.getElementById('modelado-screen');
     if (modeladoScreen) {
       modeladoScreen.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+  } else if (seccion === 'Normalizacion') {
+    const normalizacionScreen = document.getElementById('normalizacion-screen');
+    if (normalizacionScreen) {
+      normalizacionScreen.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+  } else if (seccion === 'Proyectos') {
+    const proyectosScreen = document.getElementById('proyectos-screen');
+    if (proyectosScreen) {
+      proyectosScreen.classList.remove('hidden');
       document.body.style.overflow = 'hidden';
     }
   }
