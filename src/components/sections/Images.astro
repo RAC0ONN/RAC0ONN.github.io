@@ -5,21 +5,16 @@ import CV from "@cv";
 const images = CV.images!;
 ---
 
-<!-- 1. PANTALLA COMPLETA DE SQL (Se muestra solo si estás en esa sección) -->
 <div id="sql-screen" class="hidden fixed inset-0 bg-[#030712] text-slate-200 z-50 overflow-y-auto p-6 md:p-12 selection:bg-blue-500/30">
   <div class="max-w-4xl mx-auto">
-    
-    <!-- Botón para cerrar y regresar -->
     <a href="?" class="inline-flex items-center text-sm text-blue-400 hover:text-blue-300 transition-colors mb-8 font-mono">
       ← Volver al portafolio
     </a>
 
-    <!-- Título Grande -->
     <h1 class="text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-400 mb-6 tracking-tight">
       SQL
     </h1>
 
-    <!-- Contenido Teórico -->
     <div class="space-y-6 text-base md:text-lg text-slate-300 leading-relaxed bg-slate-900/40 p-6 rounded-2xl border border-slate-800/60 backdrop-blur-sm">
       <p>
         <strong class="text-blue-400 font-semibold block mb-1">El proceso se estructura:</strong>
@@ -59,12 +54,10 @@ const images = CV.images!;
       </p>
     </div>
 
-    <!-- Subtítulo de Ejercicios -->
     <h2 class="text-2xl font-bold text-slate-100 mt-12 mb-4 tracking-tight border-b border-slate-800 pb-2">
       ejercicios SQL
     </h2>
 
-    <!-- Bloque de Código SQL -->
     <div class="relative bg-slate-950 rounded-xl border border-slate-800 overflow-hidden shadow-2xl mb-12">
       <div class="flex items-center justify-between px-4 py-2 bg-slate-900 border-b border-slate-800 text-xs text-slate-400 font-mono">
         <span>ejercicios.sql</span>
@@ -113,11 +106,112 @@ SELECT * FROM DEPARTAMENTOS WHERE Presupuesto BETWEEN 50000 AND 70000;
 SELECT E.ClaveEmpleado, E.Nombre, E.Apellido FROM EMPLEADOS E JOIN DEPARTAMENTOS D ON E.ClaveDepto = D.ClaveDepto WHERE D.Nombre = 'Contabilidad';
 SELECT E.Nombre, E.Apellido, D.Nombre AS NombreDepartamento FROM EMPLEADOS E JOIN DEPARTAMENTOS D ON E.ClaveDepto = D.ClaveDepto;`}</code></pre>
     </div>
-
   </div>
 </div>
 
-<!-- 2. TU SECCIÓN DE SECCIONES ORIGINAL -->
+<div id="modelado-screen" class="hidden fixed inset-0 bg-[#030712] text-slate-200 z-50 overflow-y-auto p-6 md:p-12 selection:bg-blue-500/30">
+  <div class="max-w-4xl mx-auto">
+    <a href="?" class="inline-flex items-center text-sm text-blue-400 hover:text-blue-300 transition-colors mb-8 font-mono">
+      ← Volver al portafolio
+    </a>
+
+    <h1 class="text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-400 mb-6 tracking-tight">
+      Modelos Entidad Relación MER
+    </h1>
+
+    <div class="space-y-6 text-base md:text-lg text-slate-300 leading-relaxed bg-slate-900/40 p-6 rounded-2xl border border-slate-800/60 backdrop-blur-sm mb-4">
+      <p>
+        El Modelo Entidad Relación (MER o ERD) es una herramienta para el modelado de datos que ayuda a representar entidades en una base de datos de forma visual e intuitiva. Fue desarrollado por Peter Chen en el 1976 y permite a los diseñadores actuales crear una representación abstracta de cómo los datos se organizan, relacionan e interactúan dentro del sistema de información.
+      </p>
+      
+      <p class="font-semibold text-blue-400">
+        El Modelo Entidad Relación está formado por tres elementos que trabajan en conjunto, son los siguientes:
+      </p>
+
+      <ul class="space-y-4 list-none pl-0 text-sm md:text-base">
+        <li class="bg-slate-950/40 p-4 rounded-xl border border-slate-800/50">
+          <strong class="text-indigo-400 text-lg block mb-1">Entidades:</strong> representan objetos, personas, conceptos o lugares del mundo real sobre los que se quiere almacenar información. Por ejemplo, en una universidad, las entidades podrían ser los estudiantes, profesores, asignaturas, notas y aulas entre muchos otros.
+        </li>
+        <li class="bg-slate-950/40 p-4 rounded-xl border border-slate-800/50">
+          <strong class="text-indigo-400 text-lg block mb-1">Atributos:</strong> se trata de las características o propiedades que describen a las entidades. Por ejemplo, dentro de la universidad, cada estudiante tiene nombre, apellidos, carrera en la que se ha matriculado etc.
+        </li>
+        <li class="bg-slate-950/40 p-4 rounded-xl border border-slate-800/50">
+          <strong class="text-indigo-400 text-lg block mb-1">Relaciones:</strong> son las conexiones entre las distintas entidades, estableciendo como interactúan entre sí dentro del sistema.
+        </li>
+      </ul>
+
+      <span class="block text-xs text-slate-500 font-mono mt-4">
+        Extraido de <a href="https://universidadeuropea.com/blog/modelo-entidad-relacion/" target="_blank" class="text-blue-500 underline hover:text-blue-400">https://universidadeuropea.com/blog/modelo-entidad-relacion/</a>
+      </span>
+    </div>
+
+    <div class="h-px bg-gradient-to-r from-transparent via-slate-700 to-transparent my-10"></div>
+
+    <h2 class="text-3xl font-bold text-slate-100 mb-4 tracking-tight">
+      Taller MER - ER
+    </h2>
+    
+    <div class="bg-slate-900/20 border border-slate-800 p-6 rounded-xl text-slate-300 space-y-4 mb-6">
+      <p class="text-sm md:text-base leading-relaxed">
+        Se desea informatizar la gestión de una empresa de transportes que reparte paquetes por toda Colombia. Los encargados de llevar los paquetes son los Conductores, de los que se quiere guardar el número de cédula de ciudadanía, nombre, teléfono, dirección, salario y ciudad en la que vive. De los paquetes transportados interesa conocer el código de paquete, descripción, destinatario y dirección del destinatario. Un conductor distribuye muchos paquetes, y un paquete sólo puede ser distribuido por un conductor.
+      </p>
+      <p class="text-sm md:text-base leading-relaxed">
+        De las ciudades a las que llegan los paquetes interesa guardar el código de ciudad y el nombre. Un paquete sólo puede llegar a una ciudad. Sin embargo, a una ciudad pueden llegar varios paquetes. De los camiones que llevan los Conductores, interesa conocer la matrícula, modelo, tipo y potencia. Un conductor puede conducir diferentes camiones en fechas diferentes, y un camión puede ser conducido por varios Conductores.
+      </p>
+      <p class="text-xs font-mono text-indigo-400">
+        Constrúyase un diagrama E-R. Indique cuáles son las entidades identificadas con los atributos, llaves primarias y llaves foráneas de cada una. Realice la reducción a tablas respectiva y documente todas las decisiones que se hagan acerca de restricciones de correspondencia
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+      <div class="bg-slate-950 rounded-xl border border-slate-800 p-2 overflow-hidden shadow-md">
+        <img src="/evidencias/taller1_imagen1.png" alt="Diagrama ER Transporte 1" class="w-full h-auto rounded-lg object-cover bg-slate-900" />
+        <span class="text-xs text-slate-500 text-center block mt-2 font-mono">Diagrama E-R</span>
+      </div>
+      <div class="bg-slate-950 rounded-xl border border-slate-800 p-2 overflow-hidden shadow-md">
+        <img src="/evidencias/taller1_imagen2.png" alt="Diagrama ER Transporte 2" class="w-full h-auto rounded-lg object-cover bg-slate-900" />
+        <span class="text-xs text-slate-500 text-center block mt-2 font-mono">Reducción a Tablas</span>
+      </div>
+    </div>
+
+    <div class="bg-slate-950 border border-slate-800/80 rounded-xl p-4 mb-10 font-mono text-xs">
+      <span class="text-slate-400 block mb-1">🔗 URL Evidencia:</span>
+      <a href="#" target="_blank" class="text-blue-400 hover:underline break-all">AQUÍ_VA_TU_URL_1</a>
+    </div>
+
+    <div class="h-px bg-gradient-to-r from-transparent via-slate-700 to-transparent my-10"></div>
+
+    <h3 class="text-2xl font-bold text-slate-100 mb-4 tracking-tight">
+      Caso de Estudio: Bienes Raíces
+    </h3>
+
+    <div class="bg-slate-900/20 border border-slate-800 p-6 rounded-xl text-slate-300 space-y-4 mb-6">
+      <p class="text-sm md:text-base leading-relaxed">
+        Una empresa de bienes raíces realiza un seguimiento de las casas en venta y de los clientes que buscan comprar casas. Una casa en venta puede estar listada con esta firma o con otra diferente. Estar “listado” con una firma significa que el dueño de la casa tiene un contrato con un agente que trabaja para esa firma. Un agente de bienes raíces de la empresa se caracteriza por tener un nombre (compuesto por Primer nombre, Segundo Nombre, Primer Apellido y Segundo Apellido), cédula de ciudadanía, género, fecha de nacimiento (sobre la cual se obtiene la edad), una cantidad de ventas realizadas en el último mes y un código de agente único. Cada casa en el mercado tiene precio, dirección, propietario y una lista de características, como el número de dormitorios, baños, tipo de calefacción, electrodomésticos, tamaño del garaje, etc. Esta lista puede ser diferente para diferentes casas, y algunas características pueden estar presentes en algunas casas, pero faltar en otras. Asimismo, cada cliente tiene preferencias que se expresan en los mismos términos (el número de dormitorios, baños, etc.). Aparte de estas preferencias, los clientes especificaran el rango de precios de las casas que les interesan.
+      </p>
+      <p class="text-xs font-mono text-indigo-400">
+        Constrúyase un diagrama E-R. Indique cuáles son las entidades identificadas con los atributos, llaves primarias y llaves foráneas de cada una. Realice la reducción a tablas respectiva y documente todas las decisiones que se hagan acerca de restricciones de correspondencia
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+      <div class="bg-slate-950 rounded-xl border border-slate-800 p-2 overflow-hidden shadow-md">
+        <img src="/evidencias/taller2_imagen1.png" alt="Diagrama ER Bienes Raíces 1" class="w-full h-auto rounded-lg object-cover bg-slate-900" />
+        <span class="text-xs text-slate-500 text-center block mt-2 font-mono">Diagrama E-R</span>
+      </div>
+      <div class="bg-slate-950 rounded-xl border border-slate-800 p-2 overflow-hidden shadow-md">
+        <img src="/evidencias/taller2_imagen2.png" alt="Diagrama ER Bienes Raíces 2" class="w-full h-auto rounded-lg object-cover bg-slate-900" />
+        <span class="text-xs text-slate-500 text-center block mt-2 font-mono">Reducción a Tablas</span>
+      </div>
+    </div>
+
+    <div class="bg-slate-950 border border-slate-800/80 rounded-xl p-4 mb-12 font-mono text-xs">
+      <span class="text-slate-400 block mb-1">🔗 URL Evidencia:</span>
+      <a href="#" target="_blank" class="text-blue-400 hover:underline break-all">AQUÍ_VA_TU_URL_2</a>
+    </div>
+  </div>
+</div>
+
 <Section className={Astro.props.className} title="Evidencias">
   {images?.intro && <p class="font-mono ml-3 text-skin-muted">{images.intro}</p>}
 
@@ -137,7 +231,6 @@ SELECT E.Nombre, E.Apellido, D.Nombre AS NombreDepartamento FROM EMPLEADOS E JOI
   </div>
 </Section>
 
-<!-- 3. DETECTOR DE SECCIÓN PARA MOSTRAR U OCULTAR SIN TOCAR RUTAS -->
 <script>
   const urlParams = new URLSearchParams(window.location.search);
   const seccion = urlParams.get('seccion');
@@ -146,7 +239,13 @@ SELECT E.Nombre, E.Apellido, D.Nombre AS NombreDepartamento FROM EMPLEADOS E JOI
     const sqlScreen = document.getElementById('sql-screen');
     if (sqlScreen) {
       sqlScreen.classList.remove('hidden');
-      document.body.style.overflow = 'hidden'; // Evita scroll doble detras
+      document.body.style.overflow = 'hidden';
+    }
+  } else if (seccion === 'Modelado') {
+    const modeladoScreen = document.getElementById('modelado-screen');
+    if (modeladoScreen) {
+      modeladoScreen.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
     }
   }
 </script>
