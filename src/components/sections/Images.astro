@@ -864,20 +864,22 @@ SELECT E.Nombre, E.Apellido, D.Nombre AS NombreDepartamento FROM EMPLEADOS E JOI
   
   if (seccion === 'SQL') {
     document.getElementById('sql-screen')?.classList.remove('hidden');
+    document.body.style.overflow = 'hidden';
   } 
   else if (seccion === 'Modelado') {
     document.getElementById('modelado-screen')?.classList.remove('hidden');
+    document.body.style.overflow = 'hidden';
   } 
   else if (seccion === 'Normalizacion' || seccion === 'Normalización') {
     document.getElementById('normalizacion-screen')?.classList.remove('hidden');
+    document.body.style.overflow = 'hidden';
   } 
-  else if (seccion === 'Proyectos' || seccion === 'Proyecto') {           // ← Acepta ambos
+  else if (seccion === 'Proyecto') {
     document.getElementById('proyecto-screen')?.classList.remove('hidden');
+    document.body.style.overflow = 'hidden';
   }
 
-  document.body.style.overflow = 'hidden';
-
-  // Cerrar con tecla Escape
+  // Opcional: cerrar con Escape
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') {
       document.querySelectorAll('.fixed.inset-0').forEach(screen => {
