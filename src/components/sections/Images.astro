@@ -693,7 +693,7 @@ SELECT E.Nombre, E.Apellido, D.Nombre AS NombreDepartamento FROM EMPLEADOS E JOI
   </div>
 </div>
 
-<div id="proyectos-screen" class="hidden fixed inset-0 bg-[#030712] text-slate-200 z-50 overflow-y-auto p-6 md:p-12 selection:bg-blue-500/30">
+<div id="proyecto-screen" class="hidden fixed inset-0 bg-[#030712] text-slate-200 z-50 overflow-y-auto p-6 md:p-12 selection:bg-blue-500/30">
   <div class="max-w-4xl mx-auto">
     <a href="?" class="inline-flex items-center text-sm text-blue-400 hover:text-blue-300 transition-colors mb-8 font-mono">
       ← Volver al portafolio
@@ -864,22 +864,20 @@ SELECT E.Nombre, E.Apellido, D.Nombre AS NombreDepartamento FROM EMPLEADOS E JOI
   
   if (seccion === 'SQL') {
     document.getElementById('sql-screen')?.classList.remove('hidden');
-    document.body.style.overflow = 'hidden';
   } 
   else if (seccion === 'Modelado') {
     document.getElementById('modelado-screen')?.classList.remove('hidden');
-    document.body.style.overflow = 'hidden';
   } 
   else if (seccion === 'Normalizacion' || seccion === 'Normalización') {
     document.getElementById('normalizacion-screen')?.classList.remove('hidden');
-    document.body.style.overflow = 'hidden';
   } 
-  else if (seccion === 'Proyecto') {
-    document.getElementById('proyectos-screen')?.classList.remove('hidden');
-    document.body.style.overflow = 'hidden';
+  else if (seccion === 'Proyectos' || seccion === 'Proyecto') {           // ← Acepta ambos
+    document.getElementById('proyecto-screen')?.classList.remove('hidden');
   }
 
-  // Opcional: cerrar con Escape
+  document.body.style.overflow = 'hidden';
+
+  // Cerrar con tecla Escape
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') {
       document.querySelectorAll('.fixed.inset-0').forEach(screen => {
