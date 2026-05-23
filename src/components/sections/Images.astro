@@ -839,6 +839,25 @@ SELECT E.Nombre, E.Apellido, D.Nombre AS NombreDepartamento FROM EMPLEADOS E JOI
   </div>
 </div>
 
+<Section className={Astro.props.className} title="Evidencias">
+  {images?.intro && <p class="font-mono ml-3 text-skin-muted">{images.intro}</p>}
+
+  <div class="grid grid-cols-1 gap-4 p-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+    {
+      (images?.list ?? []).map((item) => (
+        <a
+          href={`?seccion=${item.alt}`} 
+          class="group relative flex h-52 flex-col items-center justify-center rounded-lg border border-skin-hue/30 bg-skin-button-accent/10 px-6 py-8 text-center shadow-sm transition-all hover:border-skin-hue/50 hover:bg-skin-button-accent/20 hover:shadow-md focus:outline-none focus:ring-2 focus:ring-skin-accent"
+        >
+          <span class="mb-4 text-xl font-bold text-skin-accent">{item.alt}</span>
+          <p class="text-sm text-skin-muted line-clamp-3">{item.desc}</p>
+          <span class="mt-6 text-xs opacity-70">Abrir sección →</span>
+        </a>
+      ))
+    }
+  </div>
+</Section>
+
 <script>
   const urlParams = new URLSearchParams(window.location.search);
   const seccion = urlParams.get('seccion');
@@ -869,35 +888,4 @@ SELECT E.Nombre, E.Apellido, D.Nombre AS NombreDepartamento FROM EMPLEADOS E JOI
       document.body.style.overflow = 'visible';
     }
   });
-</script>
-
-<script>
-  const urlParams = new URLSearchParams(window.location.search);
-  const seccion = urlParams.get('seccion');
-  
-  if (seccion === 'SQL') {
-    const sqlScreen = document.getElementById('sql-screen');
-    if (sqlScreen) {
-      sqlScreen.classList.remove('hidden');
-      document.body.style.overflow = 'hidden';
-    }
-  } else if (seccion === 'Modelado') {
-    const modeladoScreen = document.getElementById('modelado-screen');
-    if (modeladoScreen) {
-      modeladoScreen.classList.remove('hidden');
-      document.body.style.overflow = 'hidden';
-    }
-  } else if (seccion === 'Normalizacion') {
-    const normalizacionScreen = document.getElementById('normalizacion-screen');
-    if (normalizacionScreen) {
-      normalizacionScreen.classList.remove('hidden');
-      document.body.style.overflow = 'hidden';
-    }
-  } else if (seccion === 'Proyectos') {
-    const proyectosScreen = document.getElementById('proyectos-screen');
-    if (proyectosScreen) {
-      proyectosScreen.classList.remove('hidden');
-      document.body.style.overflow = 'hidden';
-    }
-  }
 </script>
